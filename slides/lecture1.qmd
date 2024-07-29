@@ -309,6 +309,8 @@ $$ x_0 + (x_0 \cdot \Delta\%) = x_1 $$
 
 - The domain and range are important to understand the behavior of the function
 
+# Functions: domain and range
+
 - Some functions have a restricted domain because of the way the equation is defined
     - E.g. $f(x) = \frac{1}{x}$ has a domain of all real numbers except 0
     - The function is not defined at 0 because there is no such thing as division by 0
@@ -359,6 +361,8 @@ $$ x_0 + (x_0 \cdot \Delta\%) = x_1 $$
 
 - Now, let us see what happens when $L = 2$ and $K = 2$.
     - $Q = 2(2) + 3(2) = 4 + 6 = 10$
+
+# Application: returns to scale in a production function
 
 - How to see if output has doubled? We can calculate the percentage change in output.
     - $\Delta \% = 10/5 - 1 = 1$
