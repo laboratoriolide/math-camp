@@ -284,6 +284,57 @@ $$ x_0 + (x_0 \cdot \Delta\%) = x_1 $$
 
 - Functions can be linear, quadratic, exponential, logarithmic, etc.
 
+# Functions
+
+- The simplest function is the constant function, which always returns the same value
+    - E.g. $f(x) = 5$
+
+- Notice how this challenges our equation solving skills
+    - There is no unknown to solve for
+    - If we input 3, we get 5, if we input 10, we get 5
+
+- A linear function is the next simplest.
+    - E.g. $f(x) = 2x + 3$
+    - Here we do have an input $x$ which goes into the function
+    - The function multiplies the input by 2, adds 3, and returns the result
+    - It's called linear because the graph of the function is a straight line
+
+# Functions: domain and range
+
+- The **domain** of a function is the set of all possible inputs
+    - For $f(x) = 2x + 3$, the domain is all real numbers ($\mathbb{R}$)
+
+- The **range** of a function is the set of all possible outputs
+    - For $f(x) = 2x + 3$, the range is all real numbers ($\mathbb{R}$)
+
+- The domain and range are important to understand the behavior of the function
+
+- Some functions have a restricted domain because of the way the equation is defined
+    - E.g. $f(x) = \frac{1}{x}$ has a domain of all real numbers except 0
+    - The function is not defined at 0 because there is no such thing as division by 0
+
+- The domain and range are often represented as intervals
+    - E.g. $x \in (-\infty, 0) \cup (0, \infty)$
+    - E.g. $f(x) \in (-\infty, 0) \cup (0, \infty)$
+
+- Without differential calculus, to find the domain and range of a function easily, you can plot it
+    - With some time, you will start recognizing the behavior of functions
+
+# Inequalities
+
+- Inequalities are statements that two expressions are not equal
+    - E.g. $x > 5$
+
+- When we have more elaborate expressions, we can have more complex inequalities
+    - E.g. $2x + 3 > 5$
+    - Simplify using the rules of equations to find which values of $x$ make the inequality true.
+    - E.g. $2x > 2$, $x > 1$. This means that all values of $x$ greater than 1 make $2x + 3 > 5$ true.
+
+- Use the same rules as equations to solve inequalities, except when multiplying or dividing by a negative number
+    - In this case, the inequality sign flips
+    - E.g. $-2x < 6$, $x > -3$
+
+- Inequalities are often used to represent constraints in optimization problems
 
 # Application: returns to scale in a production function
 
@@ -294,3 +345,36 @@ $$ x_0 + (x_0 \cdot \Delta\%) = x_1 $$
     - This is called **returns to scale**
 
 - This can be worked out by combining all of our knowledge so far
+
+# Application: returns to scale in a production function
+
+- A production function is given by $Q = 2L + 3K$, where $Q$ is the output, $L$ is labor, and $K$ is capital.
+    - Think of it as a firm that produces goods (can be pizza) using workers and ovens.
+
+- What happens to output if we double both labor and capital? Can the pizza firm double pizza production? 
+
+- We can work this out by plugging in values to the production function.
+    - We need a base value of output. Let us see what happens when $L = 1$ and $K = 1$.
+    - $Q = 2(1) + 3(1) = 2 + 3 = 5$
+
+- Now, let us see what happens when $L = 2$ and $K = 2$.
+    - $Q = 2(2) + 3(2) = 4 + 6 = 10$
+
+- How to see if output has doubled? We can calculate the percentage change in output.
+    - $\Delta \% = 10/5 - 1 = 1$
+    - This means that output changed by 100% (doubled)
+
+- When output changes by the same proportion as the inputs, we say that the production function has constant returns to scale.
+    - If you double the inputs, you double the outputs
+
+# Application: returns to scale in a production function
+
+- If the percentage change in output is less than the percentage change in inputs, we say that the production function has decreasing returns to scale.
+    - If you double the inputs, you get less than double the outputs
+
+- If the percentage change in output is more than the percentage change in inputs, we say that the production function has increasing returns to scale.
+    - If you double the inputs, you get more than double the outputs
+
+- Returns to scale are important for understanding the behavior of firms and countries.
+    - What kind of production function do you think Ecuador has?
+    - How do you think researchers can estimate the production function of a country?
