@@ -7,6 +7,7 @@ date: 2024-01-01
 theme: berlin
 date-format: "YYYY"
 format: beamer
+fontsize: 10pt
 include-in-header:
     - text: |
         \setbeamercolor{background canvas}{bg=white}
@@ -14,4 +15,282 @@ include-in-header:
         \usecolortheme[named=black]{structure}
 ---
 
-# 
+# Introduction: Mathematics and the Social Sciences
+
+- Mathematics per se **not** a distinct field in the social sciences 
+
+- We use mathematics **as an approach** to study reality
+
+- It is not hard to think about social science models which were initially not mathematical
+    - Freud's model of the id, ego, and superego
+    - Downs' of rational voting through utility maximization
+    - Schumpeter's model of creative destruction
+
+- Modern researchers represent models using math
+    - Allows to extend the model using mathematical "laws"
+    - Makes models less subject to interpretation
+    - Allows for statistical testing of hypotheses
+
+# Is it so challenging?
+
+- Math is often feared because of its complexity
+    
+- Often the reason people fail is poor foundations
+
+- Must master basic concepts before moving to more complex ones
+    - This means that math takes time and few have the patience for it
+    - Comparing yourself to others is **not useful**
+    - Some have better foundations, some have inherent talent, some have more time
+
+# Order of operations
+
+- The order of operations defines the priority of operations in an expression
+
+- This is a consensus which everyone agreed to so we can all understand each other
+    - Calculators and statistical software follow this order
+    - As basic as this is, this is tested on the GRE (graduate school entrance exam)
+
+- **PEMDAS**: **P**arentheses, **E**xponents, **M**ultiplication and **D**ivision, **A**ddition and **S**ubtraction
+
+- If two operations have the same priority, we go from left to right. 
+
+- No sign means multiplication
+
+# Exercise {.incremental}
+
+## Order of operations
+
+Calculate the following expression:
+
+$$ 3 + 4 \times 2^2(3+1\times 3 \div 3)  + 4-5 +5$$
+
+
+# Solution
+
+## Order of operations
+
+- Start with the parentheses. Apply PEMDAS within too.
+
+$$ 4 \times 1 = 4$$
+
+- Substitute into the full expression, follow order, and solve
+\begin{align*}
+3 + 4 \times 2^2(4)  + 4-5 +5 \\
+3 + 4 \times 4(4)  + 4-5 +5 \\
+3 + 4 \times 16  + 4-5 +5 \\
+3 + 64  + 4-5 +5 \\
+67 + 4-5 +5 \\
+71 - 5 + 5 \\
+71
+\end{align*}
+
+# Thoughts
+
+- As useless this might be with numbers, it is crucial when working with variables
+    - E.g. What does $\lambda_1 (x_1 + x_2) \times \lambda_1 x_1 + x_2^2 (\tau \cdot \gamma)$ simplify to?
+
+-  Calculators typically don't work with variables
+
+- Not understanding PEMDAS may lead you to code the wrong formula in your software
+    - It is hard to debug this as it not a syntax error
+
+# Variables and the greek alphabet
+
+- Variables are used to represent unknowns in equations
+    - Technically, they are placeholders for numbers
+
+- $x$ is commonly used, $y$ and $z$ are common too
+
+- Scientists need more variables as they study more complex systems
+    - The greek alphabet is used for this
+
+- Get comfortable seeing and using the greek alphabet
+
+# The Greek alphabet
+
+![Greek alphabet. Source: University of Northern Colorado](img/greek_alphabet.png)
+
+- Commonly, the same letter is used for different purposes in different fields and contexts
+    - $\beta$ represents the slope coefficient, but also the discount factor in finance
+
+# Working with percentages and proportions
+
+- Percentages are a way to express a fraction of a whole (the symbol being %)
+
+- The word "percent" means "per hundred"; meaningful for calculation
+
+$$\text{Percentage} \% = \frac{\text{Part}}{\text{Whole}} \times 100 \% $$
+
+- A useful way of thinking about percentages is as *proportions*: the decimal representation of the percentage
+    - Divide by 100 and drop the % sign
+    - 50% is 0.50, 25% is 0.25, 100% is 1.00
+
+- This is useful for calculations so you don't use the above formula all the time
+
+- Example: A 25% discount on a \$75 item is $0.25 \times 75 = 18.75$
+
+# Working with percentages and proportions
+
+- Example: What is the final price of a \$75 item with a 25% discount?
+
+- You may be tempted to use the rule of three, but this is not necessary (it takes longer)
+
+- Use proportions to understand that 1 reprents the full price (the $75) and 0.25 represents the discount.
+
+$$ \$75 \cdot (1 - 0.25) = \$75 \cdot 0.75 = \$56.25$$
+
+- Notice that the new final price is 75% of the original price, so this makes sense!
+    - Don't be afraid to use your intuition
+    - Social scientists are not math machines, we use intuition to guide us
+
+# Percentage change and subindices
+
+- It is common to express increases and decreases in percentages
+
+- This involves introducing the concept of **variation**
+    - Typically, we express change or variation as $\Delta$
+
+- Often, we use subindices to represent the old and new values
+    - E.g. $x_0$ is the old value, $x_1$ is the new value
+
+- The formula for percentage change is
+
+$$ \Delta \% = \frac{\text{New} - \text{Old}}{\text{Old}} \times 100 \% = \frac{x_1 - x_0}{x_0}\times 100 $$
+
+- A shorthand for this is dividing the final value by the initial value and subtracting 1
+    - A negative value means a decrease, a positive value means an increase
+
+# Solving for a final value after a percentage change
+
+- Example: The central government has proposed a 10% increase in the minimum wage. If the current minimum wage is \$460, what would be the new minimum wage?
+
+- Typically, one would calculate the 10% of \$460 and add it to the original value.
+
+$$ x_0 + (x_0 \cdot \Delta\%) = x_1 $$
+
+- It is faster to represent $\Delta\%$ as a proportion, add it to 1, and multiply by the original value (1 + 0.10 = 1.10)
+
+- Doing this is a simplification from the formula above
+
+- However, it is also intuitive, since you're simply finding a value which is 10% larger than the whole (which is 1). 
+
+- So, the new minimum wage is \$460 $\times$ 1.10 = \$506
+
+# Solving for a final value after a percentage change
+
+- The same can be done for percentage *decreases*
+
+- Example: The average wage of an economics graduate has decreased by 5%. If the average wage was \$500, what is the new average wage?
+
+- The new average wage is \$500 $\times$ (1-0.05) = \$500 $\times$ 0.95 = \$475
+
+- Once again, this is intuitive: the new wage is only 95% of the original wage
+
+# An exercise for you
+
+- Example: A Juan Valdez iced matcha latte costs \$3.50. What is the added value tax being paid by the consumer?
+
+# Solution
+
+- The current tax is 15% of the price
+
+- In Ecuador, law mandates that the tax is included in the price
+
+- The price after tax can be calculated as $P_{\text{bf}} \cdot 1.15 = 3.50$, so it is $3.50 / 1.15 \approx 3.04$
+
+- The tax is the difference between the price before and after tax, so it is $3.50 - 3.04 = 0.46$
+
+- Notice that if I had calculated 15% of \$3.50, I would have gotten \$0.525, which is not the same
+
+- This is because the tax is calculated on the price before tax, not the price after tax.
+
+- You have to be very careful when defining the "whole" in the percentage formula!
+
+# Ratios
+
+- Ratios are a way to express the relationship between two parts of a whole
+    - Not the same as the percentage, which is the relationship of a part to the whole
+
+- They are often expressed as 1 to 2, 1:2. 
+
+- These can be a bit confusing, but context is helpful.
+    - A ratio of 1:2 means that for every 1 unit of the first part, there are 2 units of the second part
+    
+- Example: A production function using a ratio of 1:2 for labor and capital means that for every 1 unit of labor, 2 units of capital are used. 
+
+# Application: tax rate changes and percentage change interpretations
+
+- Recently, the Ecuadorian government increased the value-added tax (VAT) rate from 12% to 15%
+
+- Question for you: which the following statements is correct?
+    1. There was a 3% increase in the VAT rate
+    2. There was a 25% increase in the VAT rate
+    3. There was a 15% increase in the VAT rate
+
+# Percentage points and percent changes
+
+- When we are analyzing something is measured in percentages itself, we need to be careful
+
+- We call the the absolute change for these cases a **percentage point change**
+
+- This is different from a **percent change**, which is the relative change from a value
+
+- It might or might not be useful to use percentage changes for these cases, as it can be misleading
+
+- This is when expressing everything as a proportion might be useful.
+
+# Ratios
+
+- You can work out the the relationship from one part to the whole by adding the parts of the ratio.
+    - This may or may not make sense depending on the context
+
+- With a ratio of 1:2 for labor and capital, the whole is 3 units, but this is not meaningful
+
+- However, if you're told that in a hospital the ratio of doctors to nurses is 1:2, then doctors are 1/3 of the whole staff
+
+# Equations 
+
+- An equation is a statement that two expressions are equal, typically with an unknown.
+    - E.g. $x + 2 = 5$
+    
+- We often care about solving equations, which means finding the value of the unknown that makes the equation true (i.e. satisfies the equation)
+    - For above, $x = 3$ will make the equation true (5 = 5)
+
+- Equations can be solved by isolating the unknown on one side of the equation, and doing the math.
+
+# Equations
+
+- There are rules for solving equations:
+    - You can add or subtract the same value to both sides
+    - You can multiply or divide both sides by the same value
+    - Exponents must be raised to the same power on both sides
+    - You can take the square root of both sides by adding $\pm$
+    - We will see more rules as we go along
+
+# Functions
+
+- A function is a rule that assigns a unique output to each input
+    - Think of it as a machine that takes an input and gives an output
+    - We stop caring about solving for the unknown, and care about the relationship between the input and output
+
+- Functions are often represented as $f(x)$, where $f$ is the function and $x$ is the input
+    - The value of the function at $x$ is $f(x)$
+
+- A function doesn't necessarily have to be a mathematical formula, but it is often represented as one
+
+- Social scientists use functions to represent social phenomena
+    - E.g. the relationship between income and happiness
+    - E.g. the relationship between education and income
+
+- Functions can be linear, quadratic, exponential, logarithmic, etc.
+
+
+# Application: returns to scale in a production function
+
+- A production function is a mathematical model of how a country, a firm or any economic agent transform resources (inputs) into goods and services (outputs)
+
+- In certain contexts, researchers care about whether the production function can be scaled
+    - This means asking whether doubling the inputs will double the outputs?
+    - This is called **returns to scale**
+
+- This can be worked out by combining all of our knowledge so far
