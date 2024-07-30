@@ -216,7 +216,16 @@ $$ x_0 + (x_0 \cdot \Delta\%) = x_1 $$
 - These can be a bit confusing, but context is helpful.
     - A ratio of 1:2 means that for every 1 unit of the first part, there are 2 units of the second part
     
-- Example: A production function using a ratio of 1:2 for labor and capital means that for every 1 unit of labor, 2 units of capital are used. 
+- Example: A production function using a ratio of 1:2 for labor and capital means that for every 1 unit of labor, 2 units of capital are used.
+
+# Ratios
+
+- You can work out the the relationship from one part to the whole by adding the parts of the ratio.
+    - This may or may not make sense depending on the context
+
+- With a ratio of 1:2 for labor and capital, the whole is 3 units, but this is not meaningful
+
+- However, if you're told that in a hospital the ratio of doctors to nurses is 1:2, then doctors are 1/3 of the whole staff
 
 # Application: tax rate changes and percentage change interpretations
 
@@ -238,15 +247,6 @@ $$ x_0 + (x_0 \cdot \Delta\%) = x_1 $$
 - It might or might not be useful to use percentage changes for these cases, as it can be misleading
 
 - This is when expressing everything as a proportion might be useful.
-
-# Ratios
-
-- You can work out the the relationship from one part to the whole by adding the parts of the ratio.
-    - This may or may not make sense depending on the context
-
-- With a ratio of 1:2 for labor and capital, the whole is 3 units, but this is not meaningful
-
-- However, if you're told that in a hospital the ratio of doctors to nurses is 1:2, then doctors are 1/3 of the whole staff
 
 # Equations 
 
