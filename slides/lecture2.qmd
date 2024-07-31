@@ -13,6 +13,8 @@ include-in-header:
         \setbeamercolor{background canvas}{bg=white}
         \setbeamertemplate{caption}[numbered]
         \usecolortheme[named=black]{structure}
+        \usepackage{tikz}
+        \usepackage{pgfplots}
 ---
 
 # A quick recap on real numbers
@@ -25,4 +27,191 @@ include-in-header:
 
 - In some cases we will be interested in the sum of a sequence of numbers.
 
-- For example, the sum of the first $n$ natural numbers is given by:
+- For example, the sum of the first 10 natural numbers is given by:
+
+$$1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55$$
+
+- What if we want to sum the first 100 natural numbers?
+    - It is a lot to write down! Let's use an *ellipsis* to denote the sequence.
+
+$$1 + 2 + 3 + \ldots + 98 + 99 + 100 = 5,050$$
+`
+- However, this is still a lot to write down!
+
+# Sigma or summation notation
+
+- We can use the Greek letter $\Sigma$ (capital sigma) to denote the sum of a sequence of numbers.
+
+- The sum of the first 10 natural numbers can be written as:
+
+$$\sum_{i=1}^{10} = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10$$
+
+- Notice that the index $i$ represents the starting point of the sum.
+    - The upper number denotes the last number to be added.
+
+# Sigma or summation notation
+
+- More generally, the sum of the first $n$ natural numbers can be written as:
+
+$$\sum_{i=1}^{n} i = 1 + 2 + 3 + \ldots + n$$
+
+- In other situations, $i$ simply represents the index of the summands. For example:
+
+$$\sum_{i=1}^{n} a_i = a_1 + a_2 + a_3 + \ldots + a_n$$
+
+This would be the sum of any sequence of numbers $a_1, a_2, a_3, \ldots, a_n$.
+
+# Averages and sums
+
+- The arithmetic mean (or average) is the sum of a group of numbers, divided by the count of numbers. For example:
+
+$$\text{Average} = \frac{1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10}{10} = 5.5$$
+
+- More generally, any average can be written as:
+
+$$\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i$$
+
+where $x_i$ are the numbers in the sequence and $n$ is the count of numbers.
+
+# Properties of sums
+
+- The sum of a constant times a sequence of numbers is equal to the constant times the sum of the sequence.
+
+$$\sum_{i=1}^{n} c x_i = c \sum_{i=1}^{n} x_i$$
+
+This is a re-estatement of the distributive property of addition. For example, if $c = 2$:
+
+$$2(1 + 2 + 3 + 4 + 5) = 2 + 4 + 6 + 8 + 10 = 30$$
+
+# Properties of sums
+
+- The sum of two sequences of numbers is equal to the sum of the individual sequences.
+
+$$\sum_{i=1}^{n} x_i + \sum_{i=1}^{n} y_i = \sum_{i=1}^{n} (x_i + y_i)$$
+
+- This is a re-statement of the associative property of addition. See below:
+
+$$(1 + 2) + (3 + 4) = 1 + 2 + 3 + 4 = 10$$
+
+# Exponents
+
+- Exponents are a shorthand notation for repeated multiplication.
+
+$$x^n = x \cdot x \cdot x \cdot \ldots \cdot x (\text{n times})$$ 
+
+- Properties of exponents:
+
+    - $x^0 = 1$ for any $x \neq 0$.
+    - $x^1 = x$ for any $x$.
+    - $x^m \cdot x^n = x^{m+n}$.
+    - $(x^m)^n = x^{m \cdot n}$.
+    - $(x \cdot y)^n = x^n \cdot y^n$.
+    - $\frac{x^m}{x^n} = x^{m-n}$.
+    - $x^{-n} = \frac{1}{x^n}$.
+
+# Common mistakes with exponents
+
+-$x^m \cdot y^n = x^{m+n}$
+
+-$(x+y)^n = x^{n} + y^n$
+
+- $(x^m)^n = x^{m + n}$
+
+# Radicals 
+
+- The $n$-th root of a number $x$ is denoted by $\sqrt[n]{x}$.
+
+- Most common roots are the square root ($n=2$) and the cube root ($n=3$).
+
+- In english, you may hear the square root of $x$ as "the sqrt" of $x$. 
+    - This might be confusing in Spanish, where "la raíz" is used. 
+    - Emerges from a coding context in many mathematical/statistical software: `sqrt(x)`.
+    - A calculator will typically understand sqrt(4) as 2, and so on.
+
+- Properties of radicals:
+
+    - $\sqrt[n]{x} \cdot \sqrt[n]{y} = \sqrt[n]{x \cdot y}$.
+    - $\sqrt[n]{\frac{x}{y}} = \frac{\sqrt[n]{x}}{\sqrt[n]{y}}$.
+    - $\sqrt[n]{x^m} = x^{\frac{m}{n}}$.
+    - $\sqrt[n]{x}^n = x$.
+
+# Common mistakes with radicals
+
+- When faced with squared variables, it is common to think that the square root of $x^2$ is $x$. For example:
+
+\begin{align*}
+x^2 &= 4 \\
+\sqrt{x^2} &= \sqrt{4} \\
+x &= 2
+\end{align*}
+
+- Stating that only $x = 2$ is a mistake. The correct answer is $x = \pm 2$. This is since both 2 and -2 squared are equal to 4.
+
+- To avoid this mistake, always attach the $\pm$ sign when taking the square root of a squared variable in an equation. 
+
+# Quadratic equations
+
+- A quadratic equation is a polynomial equation of the form:
+
+$$ax^2 + bx + c = 0$$
+
+- For example, the equation $3x^2 - 2x - 1 = 0$ is a quadratic equation.
+
+- If you get $x^2 = 4$, you have that $a = 1$, $b = 0$, and $c = -4$.
+
+- We are often interested in finding the solutions to a quadratic equation. These are the values of $x$ that make the equation true.
+    - Also called the roots of the equation, or the zeros of the equation.
+
+# Zeros of a quadratic equation
+
+- The solutions to a quadratic equation can be found using the quadratic formula:
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+- Alternatively, you can factor the quadratic equation and solve for $x$.
+
+- For example, the equation $x^2 - 5x + 6 = 0$ can be factored as:
+
+$$(x - 2)(x - 3) = 0$$
+
+- Take each factor $(x - 2)$ and $(x - 3)$ and set them equal to zero
+    - This is often necessary when the quadratic formula is not practical.
+    - You will need to do this often in optimization problems.
+
+- Taking square roots of both sides might work, but only if the equation allows you to do so, and you're careful with the $\pm$ sign.
+
+# When are solutions not real?
+
+- Sometimes the solutions to a quadratic equation are not real numbers.
+
+- This happens when the discriminant $b^2 - 4ac$ is negative.
+
+- For example, the equation $x^2 + 1 = 0$ has no real solutions.
+
+- For our purposes, we will not be interested in complex numbers.
+
+# Absolute value
+
+- The absolute value of a number $x$ is denoted by $|x|$.
+
+- The absolute value of a number is the distance of the number from zero on the number line.
+
+- The absolute value of a number is always positive.
+
+- For example, $|3| = 3$ and $|-3| = 3$.
+
+- The absolute value of a number can be thought of as the "positive" version of the number.
+
+# Properties of absolute value
+
+- The absolute value of a number is zero if and only if the number is zero.
+
+- The absolute value of a number is positive if the number is not zero.
+
+- The absolute value of a number is the same as the number if the number is positive.
+
+- The absolute value of a number is the negative of the number if the number is negative.
+
+- The absolute value of a sum is less than or equal to the sum of the absolute values.
+
+$$|x + y| \leq |x| + |y|$$
