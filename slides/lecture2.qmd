@@ -215,3 +215,50 @@ $$(x - 2)(x - 3) = 0$$
 - The absolute value of a sum is less than or equal to the sum of the absolute values.
 
 $$|x + y| \leq |x| + |y|$$
+
+# Cobb-Douglas production functions
+
+- The Cobb-Douglas production function is a common functional form used in economics.
+
+- The production function is given by:
+
+$$Q = A L^{\alpha} K^{\beta}$$
+
+where $Q$ is the quantity of output, $L$ is the quantity of labor, $K$ is the quantity of capital, and $A$, $\alpha$, and $\beta$ are parameters.
+
+- The exponents $\alpha$ and $\beta$ are often between 0 and 1.
+
+# Particularities of the Cobb-Douglas production function
+
+- We cannot apply the properties of exponents directly to the Cobb-Douglas production function, since $L$ and $K$ are not the same base nor raised to the same power.
+
+- The exponents $\alpha$ and $\beta$ are often interpreted as the relative importance of labor and capital in the production process.
+
+- A numerical example: $Q = 2L^{0.5} K^{0.5}$.
+
+- Notice that fractional exponents are common in the Cobb-Douglas production function
+    - This means that we are essentially working with radicals
+
+# Cobb-Douglas optimal input levels
+
+- Economic theory predicts that a firm under Cobb-Douglas technology (and other assumptions) will choose capital and labour in the following way:
+
+$$\frac{K}{L} = \frac{\beta w}{\alpha r}$$
+
+where $w$ is the wage rate and $r$ is the rental rate of capital.
+
+# Example: Cobb-Douglas optimal input levels
+
+- With the knowledge that we have up to this point, we can solve for the optimal input levels of labor and capital in a Cobb-Douglas production function.
+
+- Suppose that a firm works under a Cobb-Douglas production function given by
+
+$$Q = 3L^{\alpha} K^{\beta}$$
+
+The relative importance of labor and capital is 30% and 70%, respectively. The wage is $w = 10$ and the rental rate of capital is $r = 20$.
+
+- For you: what are the optimal input levels of labor and capital?
+
+
+
+
