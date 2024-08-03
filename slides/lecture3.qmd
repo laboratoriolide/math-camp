@@ -108,5 +108,52 @@ $$2x - (3 - x) = 1$$
     - $x$ is the distance from the $y$-axis.
     - $y$ is the distance from the $x$-axis.
 
-- For example, the point $(2, 3)$ is 2 units to the right and 3 units up from the origin.
+- For example, the point $(2, 3)$ is 2 units to the right and 3 units up from the origin. See below:
 
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle,
+        xlabel=$x$,
+        ylabel=$y$,
+        xmin=-5,
+        xmax=5,
+        ymin=-5,
+        ymax=5,
+        xtick={-4,-2, 2, 4},
+        ytick={-4,-2,2,4},
+        xticklabels={$-4$,$-2$,$2$,$4$},
+        yticklabels={$-4$,$-2$,$2$,$4$},
+        ticklabel style={font=\tiny},
+        enlargelimits=true,
+        clip=false,
+        width = 5cm,
+        height = 5cm
+    ]
+    \addplot[only marks] coordinates {(2, 3)};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+# Linear equations
+
+- The equations we've seen so far are *linear* equations.
+    - They represent straight lines in the Cartesian plane.
+
+- Linear equations can be written in the form $y = mx + b$.
+    - $m$ is the *slope* of the line.
+    - $b$ is the *y-intercept*.
+
+# The Slope
+
+- The ratio of the vertical change to the horizontal change.
+    - It tells us how steep the line is.
+    - The bigger the slope, the steeper the line.
+
+- Given by $m = \dfrac{y_2 - y_1}{x_2 - x_1}$
+
+- Requires two points (call them $P_1$ and $P_2$) on the line, with coordinates $(x_1, y_1)$ and $(x_2, y_2)$.
+
+![A meme](img/slope.png){height=65%}
+
+**For extra credit: It's never fun to explain memesIn a private Slack message. **
