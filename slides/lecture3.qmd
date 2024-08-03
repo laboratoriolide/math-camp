@@ -156,4 +156,112 @@ $$2x - (3 - x) = 1$$
 
 ![A meme](img/slope.png){height=65%}
 
-**For extra credit: It's never fun to explain memesIn a private Slack message. **
+# Intercepts
+
+- The *y-intercept* is the point where the line crosses the $y$-axis.
+    - This happens when $x = 0$.
+    - So, we set $x = 0$ in the equation and solve for $y$.
+    - In the equation $y = mx + b$, the $y$-intercept is $(0, b)$.
+
+- The *x-intercept* is the point where the line crosses the $x$-axis.
+    - This happens when $y = 0$.
+    - So, we set $y = 0$ in the equation and solve for $x$.
+
+# Graphing linear equations
+
+- To graph a linear equation, we need to find two points on the line.
+    - The easiest points are the intercepts.
+    - We can also use the slope to find a second point.
+
+- Example: graph the line $y = 2x + 1$.
+    - It might be useful to draw a table of values.
+
+\begin{table}{h}
+\centering
+\begin{tabular}{c|c}
+$x$ & $y$ \\
+\hline
+0 & 1 \\
+1 & 3 \\
+-1 & -1
+\end{tabular}
+\end{table}
+
+# Graphing the line
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=10,
+    grid = major,
+    width=6cm,
+    height=6cm
+]
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=blue
+]
+{2*x + 1};
+\end{axis}
+\end{tikzpicture}
+\caption{Plot of the equation \( y = 2x + 1 \)}
+\end{figure}
+
+# Upward-sloping and downward-sloping lines
+
+- If $m > 0$, the line is "upward-sloping" or increasing.
+    - As $x$ increases, $y$ also increases.
+
+- If $m < 0$, the line is "downward-sloping" or decreasing.
+    - As $x$ increases, $y$ decreases.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    grid = major,
+    width=6cm,
+    height=6cm
+]
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=blue
+]
+{2*x + 1};
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=red
+]
+{-2*x + 1};
+\end{axis}
+\end{tikzpicture}
+\caption{Upward-sloping and downward-sloping lines}
+\end{figure}
+
+# Properties of slopes
+
+- If $m = 0$, the line is horizontal.
+    - $y$ does not change as $x$ changes.
+
+- If $m = \infty$, the line is vertical.
+    - $x$ does not change as $y$ changes.
+
+- If $m = 1$, the line has a 45-degree angle.
+
+- Lines with the same slope are parallel.
+
+- Lines with slopes that multiply to -1 are perpendicular.
+    - This means that $m_1 \cdot m_2 = -1$, or that $m_1 = -\dfrac{1}{m_2}$ (the negative reciprocal).
