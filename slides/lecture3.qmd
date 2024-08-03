@@ -1,0 +1,68 @@
+---
+title: Math for the Social Sciences Module - Young Researchers Fellowship
+subtitle: Lecture 2 - Equation Systems and Graphing
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: Daniel Sánchez Pazmiño
+date: 2024-01-01
+theme: berlin
+date-format: "YYYY"
+format: beamer
+fontsize: 10pt
+include-in-header:
+    - text: |
+        \setbeamercolor{background canvas}{bg=white}
+        \setbeamertemplate{caption}[numbered]
+        \usecolortheme[named=black]{structure}
+        \usepackage{tikz}
+        \usepackage{pgfplots}
+---
+
+# Equation systems
+
+- A set of of equations that share the same variables is called an *equation system*.
+
+- For example:
+
+\begin{align}
+x + y &= 3 \\
+2x - y &= 1
+\end{align}
+
+- Because both (1) and (2) share $x$ and $y$, they form an equation system.
+
+- We usually want to *solve* the system, i.e., find the values of $x$ and $y$ that satisfy both equations.
+
+# Solving equation systems
+
+- There are several methods to solve equation systems.
+    - Substitution
+    - Elimination
+    - Graphing
+    - Matrices (we will see this later)
+
+- Substitution is typically the most "mechanical" method.
+    - Express one variable in terms of the other and substitute in the other equation.
+
+- Elimination is more algebraic.
+    - Add or subtract the equations to eliminate one variable.
+    - Might involve multiplying one or both equations by a constant.
+
+# Solving the example system
+
+- Let's solve the example system:
+
+\begin{align*}
+x + y &= 3 \\
+2x - y &= 1
+\end{align*}
+
+- We can solve this system by substitution.
+    - From (1), we have $y = 3 - x$.
+    - Substitute this into (2):
+
+$$2x - (3 - x) = 1$$
+
+- Solve for $x$ and then substitute back to find $y$.
+
+# Graphing equation systems
+
