@@ -64,5 +64,49 @@ $$2x - (3 - x) = 1$$
 
 - Solve for $x$ and then substitute back to find $y$.
 
-# Graphing equation systems
+# The Cartesian plane
+
+- The Cartesian plane is a two-dimensional space where we can plot points.
+
+- It is formed by two perpendicular lines, the *x-axis* and the *y-axis*.
+
+- The point where the axes intersect is called the *origin*.
+
+- The axes divide the plane into four *quadrants*.
+
+# The Cartesian plane
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle,
+        xlabel=$x$,
+        ylabel=$y$,
+        xmin=-5,
+        xmax=5,
+        ymin=-5,
+        ymax=5,
+        xtick={-4,-3,-2,-1,1,2,3,4},
+        ytick={-4,-3,-2,-1,1,2,3,4},
+        xticklabels={$-4$,$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$},
+        yticklabels={$-4$,$-3$,$-2$,$-1$,$1$,$2$,$3$,$4$},
+        ticklabel style={font=\tiny},
+        enlargelimits=true,
+        clip=false
+    ]
+    \node at (axis cs: -4.5, 4.5) {II};
+    \node at (axis cs: -4.5, -4.5) {IV};
+    \node at (axis cs: 4.5, -4.5) {III};
+    \node at (axis cs: 4.5, 4.5) {I};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+# Plotting points
+
+- To plot a point, we use an ordered pair $(x, y)$.
+    - $x$ is the distance from the $y$-axis.
+    - $y$ is the distance from the $x$-axis.
+
+- For example, the point $(2, 3)$ is 2 units to the right and 3 units up from the origin.
 
