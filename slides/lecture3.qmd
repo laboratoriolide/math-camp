@@ -176,7 +176,7 @@ $$2x - (3 - x) = 1$$
 - Example: graph the line $y = 2x + 1$.
     - It might be useful to draw a table of values.
 
-\begin{table}{h}
+\begin{table}[h]
 \centering
 \begin{tabular}{c|c}
 $x$ & $y$ \\
@@ -265,3 +265,52 @@ $x$ & $y$ \\
 
 - Lines with slopes that multiply to -1 are perpendicular.
     - This means that $m_1 \cdot m_2 = -1$, or that $m_1 = -\dfrac{1}{m_2}$ (the negative reciprocal).
+
+# Graphing equation systems
+
+- To solve an equation system graphically, we graph both equations and find the point where they intersect.
+
+- The point of intersection is the solution to the system.
+
+- Example: graph the system
+
+\begin{align*}
+
+x + y &= 3 \\
+
+2x - y &= 1
+
+\end{align*}
+
+# Graphing the system
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    grid = major,
+    width=6cm,
+    height=6cm
+]
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=blue
+]
+{3 - x};
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=red
+]
+{2*x - 1};
+\end{axis}
+\end{tikzpicture}
+\caption{Graph of the system}
+\end{figure}
+
+
