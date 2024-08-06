@@ -266,6 +266,15 @@ $x$ & $y$ \\
 - Lines with slopes that multiply to -1 are perpendicular.
     - This means that $m_1 \cdot m_2 = -1$, or that $m_1 = -\dfrac{1}{m_2}$ (the negative reciprocal).
 
+# How to find the equation of a line
+
+1. If you know the slope $m$ and a point $(x_1, y_1)$ on the line, you can use the point-slope form:
+    - $y - y_1 = m(x - x_1)$
+
+2. If you know two points $(x_1, y_1)$ and $(x_2, y_2)$ on the line, you can use the slope formula to find $m$ and then use $y = mx + b$ to find $b$.
+
+3. If you know the slope $m$ and the $y$-intercept $b$, you can use $y = mx + b$ directly (this is the slope-intercept or point-slope form).
+
 # Graphing equation systems
 
 - To solve an equation system graphically, we graph both equations and find the point where they intersect.
@@ -275,11 +284,8 @@ $x$ & $y$ \\
 - Example: graph the system
 
 \begin{align*}
-
 x + y &= 3 \\
-
 2x - y &= 1
-
 \end{align*}
 
 # Graphing the system
