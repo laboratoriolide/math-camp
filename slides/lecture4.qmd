@@ -1,11 +1,13 @@
 ---
 title: Math for the Social Sciences Module - Young Researchers Fellowship
-subtitle: Lecture 4 - Logarithms and Exponential Growth
+subtitle: Lecture 4 - Logarithms and related topics
 institute: Laboratorio de Investigación para el Desarrollo del Ecuador
 author: Daniel Sánchez Pazmiño
 date: 2024-01-01
 theme: berlin
 date-format: "YYYY"
+fig-width: 8
+fig-height: 4.5
 format: beamer
 fontsize: 10pt
 include-in-header:
@@ -17,7 +19,7 @@ include-in-header:
         \usepackage{pgfplots}
 ---
 
-# A necessary prelim - Logarithms
+# Logarithms
 
 - The logarithm of a number is the power to which a base must be raised to obtain that number.
 
@@ -34,6 +36,16 @@ $$\log_b(x) = y \iff b^y = x$$
     - It is an irrational number.
     - It was discovered by the Swiss mathematician Leonhard Euler while studying compound interest (percentages).
 
+# Examples
+
+- $\log_{10}(100) = 2$ because $10^2 = 100$.
+
+- $\log_{15}(225) = 2$ because $15^2 = 225$.
+
+- $\log_{e}(e) = 1$ because $e^1 = e$.
+
+- $\ln(e^2) = 2$ because $e^2 = e^2$.
+
 # Properties of Logarithms
 
 **Product rule**: $\log_b(xy) = \log_b(x) + \log_b(y)$
@@ -43,6 +55,18 @@ $$\log_b(x) = y \iff b^y = x$$
 **Power rule**: $\log_b(x^y) = y \log_b(x)$
 
 **Change of base formula**: $\log_b(x) = \dfrac{\log_a(x)}{\log_a(b)}$
+
+**Logarithm of 1**: $\log_b(1) = 0$
+
+**Exponent rule**: $b^{\log_b(x)} = x$
+
+# Examples of Properties
+
+- $\log_{10}(1000) = \log_{10}(10 \times 100) = \log_{10}(10) + \log_{10}(100) = 1 + 2 = 3$
+
+- $\log_{10}(1000) = \log_{10}(10^3) = 3 \log_{10}(10) = 3$
+
+- $\log_{10}(1000) = \log_{2}(1000) \dfrac{\log_{2}(1000)}{\log_{2}(10)} = 3$
 
 # Logarithms are our friends!
 
@@ -58,8 +82,190 @@ $$\log_b(x) = y \iff b^y = x$$
     - Population growth, compound interest, and the spread of diseases are all examples of exponential growth.
     - Logarithms are tools to deal with these phenomena.
 
+# Logarithmic equations
+
+- Logarithmic equations are equations that involve logarithms
+    - Include an unknown variable inside the logarithm.
+
+- To solve a logarithmic equation, we need to use the properties of logarithms to simplify the equation.
+
+- Once the equation is simplified, we can solve for the unknown variable using algebraic techniques.
+
+# Example
+
+$$\log_{10}(x) = 2$$
+
+- To solve this equation, we need to remember that $\log_{10}(100) = 2$.
+
+- Therefore, $x = 100$.
+
+# Equations which use the exponent rule
+
+- The reason why logarithms are useful is that they allow us to solve equations that involve exponentials.
+
+- For example: 
+
+$$2^x = 8$$
+
+- To solve this equation, we can take the logarithm of both sides.
+
+$$\log_2(2^x) = \log_2(8)$$
+
+- Using the exponent rule, we get $x = 3$.
+
+# Exponential growth
+
+- Exponential growth is a process that increases at a constant rate over time.
+
+- It is characterized by a constant percentage growth rate.
+
+- Exponential growth is often used to model population growth, compound interest, and the spread of diseases.
+
+- The formula for exponential growth is $y = a(1 + r)^t$.
+
+# Example
+
+- A population of 1000 people grows at a rate of 5% per year.
+
+- The population after 10 years is given by the formula $y = 1000(1 + 0.05)^{10}$.
+
+- The population after 10 years is $1000(1.05)^{10} = 1628.89$.
+
+# Example
+
+- In some cases, we might want to know how long it will take for a population to reach a certain size.
+
+- For example, how long will it take for a population to double if it is growing at a rate of 5% per year?
+
+- We can use the formula $y = a(1 + r)^t$ and solve for $t$.
+
+- If the population doubles, then $2a = a(1 + r)^t$.
+
+- Therefore, $2 = (1 + 0.05)^t$.
+
+- Taking the logarithm of both sides, we get $\log(2) = t \log(1.05)$.
+
+- Therefore, $t = \dfrac{\log(2)}{\log(1.05)} \approx 14.21$ years.
+
 # Logarithmic scaling
 
 - Logarithmic scales are used when there is a large range of values.
     - They compress the scale to make it easier to read.
     - Often allow to observe trends that would be hidden in a natural scale.
+
+- Commonly, the y-axis is in logarithmic scale.
+    - A base 10 and a natural logarithm scale are the most common.
+
+# Base 10 logarithmic scale
+
+- The base 10 logarithmic scale is used whenever the data is very large
+    - It should work well with a non-log scale that is a power of 10, i.e., 10, 100, 1000, etc.
+
+- The scale compresses the data to make it easier to read.
+
+- We interpret the values in the scale as powers of 10, since $\log(10^x) = x$.
+
+# Example of base 10 logarithmic scale
+
+- Below, a dataset is shown with values that increase exponentially.
+```{r}
+library(ggplot2)
+library(knitr)
+
+data <- data.frame(x = 1:10, y = 10^seq(1, 10, by = 1))
+
+data$y <- scales::comma(data$y)
+
+kable(data)
+
+```
+
+# Example of base 10 logarithmic scale
+
+- The following plot shows the same data in a base 10 logarithmic scale and a regular scale.
+
+```{r}
+#| label: log10-scale
+
+data <- data.frame(x = 1:10, y = 10^seq(1, 10, by = 1))
+
+base_10 <-
+  ggplot(data, aes(x = x, y = y)) +
+  geom_line() +
+  scale_y_log10() +
+  labs(y = "Base 10 scale",
+       title = "Base 10 logarithmic scale")
+
+natural <-
+  ggplot(data, aes(x = x, y = y)) +
+  geom_line() +
+  labs(y = "Normal scale",
+       title = "Normal scale")
+
+gridExtra::grid.arrange(base_10, natural, ncol = 2)
+
+```
+
+# Natural logarithmic scale
+
+- The natural logarithmic scale is often used when the data shows a exponential or percent growth pattern.
+
+- Powers of $e$ are used to interpret the values in the scale, but this can be approximated to percentages. 
+
+- If a variable grows exponentially, the trend will not be linear, however, in a natural logarithmic scale, it will look linear.
+
+- Often used in economics, biology, and other fields where exponential growth is common.
+
+# Example of natural logarithmic scale
+
+- Below, a dataset is shown with values that increase exponentially.
+
+```{r}
+data <- data.frame(x = 1:10, y = exp(seq(1, 10, by = 1)))
+
+data$y <- scales::comma(data$y)
+
+kable(data)
+
+```
+
+- Notice that the values increase exponentially
+    - The percent growth is around 171.8% for each step.
+
+# Example of natural logarithmic scale
+
+- The following plot shows the same data in a natural logarithmic scale and a regular scale.
+
+```{r}
+
+data <- data.frame(x = 1:10, y = exp(seq(1, 10, by = 1)))
+
+natural_log <-
+  ggplot(data, aes(x = x, y = y)) +
+  geom_line() +
+  scale_y_log10() +
+  labs(y = "Natural logarithmic scale",
+       title = "Natural logarithmic scale")
+
+natural <-
+    ggplot(data, aes(x = x, y = y)) +
+    geom_line() +
+    labs(y = "Normal scale",
+         title = "Normal scale")
+
+gridExtra::grid.arrange(natural_log, natural, ncol = 2)
+
+```
+
+# $\ln(x)$ is a *very* good friend!
+
+- The assumption of linearity in the social sciences comes up often
+
+- This would mean forcing real world data of, say, population, to fit a constant increase of certain people per year.
+
+- This is not realistic, as populations rarely grow in this way.
+
+- Assuming that at a certain point, the population will grow at a constant *percentage* rate is more realistic.
+
+- Sticking a natural logarithm on the data will make it "log-linear", which makes the linearity assumption more realistic.
+    - This way we evade using complex statistical models!
