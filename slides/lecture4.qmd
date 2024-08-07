@@ -1,0 +1,67 @@
+---
+title: Math for the Social Sciences Module - Young Researchers Fellowship
+subtitle: Lecture 4 - Modelling in the Social Sciences
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: Daniel Sánchez Pazmiño
+date: 2024-01-01
+theme: berlin
+date-format: "YYYY"
+format: beamer
+fontsize: 10pt
+include-in-header:
+    - text: |
+        \setbeamercolor{background canvas}{bg=white}
+        \setbeamertemplate{caption}[numbered]
+        \usecolortheme[named=black]{structure}
+        \usepackage{tikz}
+        \usepackage{pgfplots}
+---
+
+# Logarithms
+
+- The logarithm of a number is the power to which a base must be raised to obtain that number.
+
+$$\log_b(x) = y \iff b^y = x$$
+
+*$\iff$ means "if and only if".
+
+- The most common logarithms are base 10 and base $e$ (Euler's number).
+
+- The natural logarithm is the logarithm with base $e$.
+    - It is denoted $\ln(x)$.
+
+- Euler's number is approximately 2.71828.
+    - It is an irrational number.
+    - It was discovered by the Swiss mathematician Leonhard Euler while studying compound interest (percentages).
+
+# Properties of Logarithms
+
+**Product rule**: $\log_b(xy) = \log_b(x) + \log_b(y)$
+
+**Quotient rule**: $\log_b\left(\dfrac{x}{y}\right) = \log_b(x) - \log_b(y)$
+
+**Power rule**: $\log_b(x^y) = y \log_b(x)$
+
+**Change of base formula**: $\log_b(x) = \dfrac{\log_a(x)}{\log_a(b)}$
+
+# Logarithms are our friends!
+
+- As icky as they might seem, logarithms are our friends **because of their properties**.
+
+- When dealing with variable exponentials, logarithms can help us simplify the problem.
+    - Use the power rule to bring down the exponent and easily differentiate.
+
+- Natural logarithms are particularly useful for the social sciences.
+    - They are used in growth models because of the Euler's number relationship to percent growth.
+
+- Exponential growth shows up in real life in many ways.
+    - Population growth, compound interest, and the spread of diseases are all examples of exponential growth.
+    - Logarithms are tools to deal with these phenomena.
+
+# Logarithmic scaling
+
+- Logarithmic scales are used when there is a large range of values.
+    - They compress the scale to make it easier to read.
+    - Often allow to observe trends that would be hidden in a natural scale.
+
+- -

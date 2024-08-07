@@ -1,6 +1,6 @@
 ---
 title: Math for the Social Sciences Module - Young Researchers Fellowship
-subtitle: Lecture 2 - Equation Systems and Graphing
+subtitle: Lecture 3 - Equation Systems and Graphing
 institute: Laboratorio de Investigación para el Desarrollo del Ecuador
 author: Daniel Sánchez Pazmiño
 date: 2024-01-01
@@ -398,4 +398,150 @@ x + y &= 3 \\
 {3 - x};
 \end{axis}
 \end{tikzpicture}
+\end{figure}
+
+# What happens when I try to solve a system that can't be solved?
+
+- If you try to solve a system that has no solution, you will get a contradiction.
+    - For example, you might find $0 = 1$.
+
+- If you try to solve a system that has infinite solutions, you will get an identity.
+    - For example, you might find $0 = 0$.
+
+- In both cases, you cannot reach something like we're used to, like $x = 3$ and $y = 2$.
+
+# More than two equations
+
+- We can extend the concept of equation systems to more than two equations.
+    - For example, a system of three equations in three variables.
+
+- The same principles apply
+    - Elimination
+    - Substitution
+    - Graphing
+    - Matrices (typically used for larger systems)
+
+- For graphing, we need to consider more dimensions.
+    - For a system of three equations in three variables, we need a three-dimensional space (3D), with $x$, $y$, and $z$ axes.
+
+# Quadratic equations revisited
+
+- Quadratic equations are equations of the form $y = ax^2 + bx + c$.
+    - They represent parabolas in the Cartesian plane.
+
+- The vertex of the parabola is given by $x = -\dfrac{b}{2a}$.
+    - This is where the parabola reaches its maximum or minimum.
+    - The vertex is the point where the parabola changes direction.
+    - It has coordinates $\dfrac{-b}{2a}, f\left(\dfrac{-b}{2a}\right)$.
+
+- The parabola opens upwards if $a > 0$ and downwards if $a < 0$.
+
+# Graphing quadratic functions
+
+- To graph a quadratic function, the vertex is a good starting point.
+
+- If there are any roots or x-intercepts, they are also useful.
+    - The roots are the points where the parabola crosses the x-axis.
+    - They are given by the solutions to the equation $ax^2 + bx + c = 0$.
+
+- Intercepts with the y-axis might be useful too.
+    - The y-intercept is the point where the parabola crosses the y-axis.
+    - Solved by setting $x = 0$ in the equation.
+    - They don't necessarily exist.
+
+- Ultimately, might need to use a table of values to plot the parabola.
+
+# Concave parabola
+
+- A parabola that opens upwards is called *concave*.
+    - It has a minimum at the vertex.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    grid = major,
+    width=6cm,
+    height=6cm
+]
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=blue
+]
+{x^2};
+\end{axis}
+\end{tikzpicture}
+\caption{Concave parabola}
+
+\end{figure}
+
+# Convex parabola
+
+- A parabola that opens downwards is called *convex*.
+    - It has a maximum at the vertex.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    grid = major,
+    width=6cm,
+    height=6cm
+]
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=blue
+]
+{-x^2};
+\end{axis}
+\end{tikzpicture}
+\caption{Convex parabola}
+\end{figure}
+
+# Cubic equations/functions
+
+- Cubic equations are equations of the form $y = ax^3 + bx^2 + cx + d$.
+    - They represent cubic functions in the Cartesian plane.
+
+- The graph of a cubic function is a curve that can have multiple inflection points.
+
+- The inflection points are points where the curve changes concavity.
+    - Convex to concave or vice versa.
+
+# Graph of a cubic function
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    grid = major,
+    width=6cm,
+    height=6cm
+]
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=blue
+]
+{x^3};
+\end{axis}
+\end{tikzpicture}
+\caption{Graph of $x^3$}
 \end{figure}
