@@ -1,6 +1,6 @@
 ---
 title: Math for the Social Sciences Module - Young Researchers Fellowship
-subtitle: Lecture 4 - Modelling in the Social Sciences
+subtitle: Lecture 4 - Logarithms and Exponential Growth
 institute: Laboratorio de Investigación para el Desarrollo del Ecuador
 author: Daniel Sánchez Pazmiño
 date: 2024-01-01
@@ -17,7 +17,7 @@ include-in-header:
         \usepackage{pgfplots}
 ---
 
-# Logarithms
+# A necessary prelim - Logarithms
 
 - The logarithm of a number is the power to which a base must be raised to obtain that number.
 
@@ -63,5 +63,3 @@ $$\log_b(x) = y \iff b^y = x$$
 - Logarithmic scales are used when there is a large range of values.
     - They compress the scale to make it easier to read.
     - Often allow to observe trends that would be hidden in a natural scale.
-
-- -

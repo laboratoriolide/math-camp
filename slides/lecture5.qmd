@@ -1,0 +1,44 @@
+---
+title: Math for the Social Sciences Module - Young Researchers Fellowship
+subtitle: Lecture 4 - Modelling in the Social Sciences
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: Daniel Sánchez Pazmiño
+date: 2024-01-01
+theme: berlin
+date-format: "YYYY"
+format: beamer
+fontsize: 10pt
+include-in-header:
+    - text: |
+        \setbeamercolor{background canvas}{bg=white}
+        \setbeamertemplate{caption}[numbered]
+        \usecolortheme[named=black]{structure}
+        \usepackage{tikz}
+        \usepackage{pgfplots}
+---
+
+# What is a quantitative model?
+
+- A model represents a simplified version of reality.
+    - It is a tool to understand and predict the behavior of a system.
+    - It is a way to test hypotheses and theories.
+
+- We focus on simplified realities because sometimes we don't care about all the details.
+    - Details are irrelevant to the question we are asking.
+    - It is easier to first understand the simple situation, then extend.
+
+- A quantitative model is a model that uses quantitative information (numbers, equations, etc) to represent the real-world system.
+    - We can later use this model to make predictions and test hypotheses.
+    - Data can be used to validate or invalidate the model.
+    - Public policy decisions can be made based on the model.
+
+# Social science models
+
+- Social scientists use models to understand how humans interact with their reality.
+
+- In this lecture we focus on the common language of social science models
+    - "Parameters", "Variables", "Constants"
+    - "Exogenous"/"Endogenous"
+    - "Equilibrium", "Stability", "Dynamics"
+    - "Independent"/"Dependent" - "Explanatory"/"Explained"
+    - "Functions", "Functional form", "Equations", "Assumptions"
