@@ -319,4 +319,83 @@ x + y &= 3 \\
 \caption{Graph of the system}
 \end{figure}
 
+# Systems with no solutions
 
+- Sometimes, the lines are parallel and do not intersect.
+    - This means that the system has no solution.
+
+- How can we tell if two lines are parallel?
+    - They have the same slope.
+    - The coefficients of $x$ and $y$ in the equations are proportional.
+
+# Systems with infinite solutions
+
+- Sometimes, the lines coincide and intersect at every point.
+    - This means that the system has infinite solutions.
+
+- How can we tell if two lines coincide?
+    - They have the same slope and the same $y$-intercept.
+    - The coefficients of $x$ and $y$ in the equations are proportional, and the constants are equal.
+
+# Graphic representations - systems with no solutions
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    grid = major,
+    width=6cm,
+    height=6cm
+]
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=blue
+]
+{3 - x};
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=red
+]
+{3 - x + 1};
+\end{axis}
+\end{tikzpicture}
+\caption{Graph of a system with no solutions}
+\end{figure}
+
+# Graphic representations - systems with infinite solutions
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    xmin=-5, xmax=5,
+    ymin=-5, ymax=5,
+    grid = major,
+    width=6cm,
+    height=6cm
+]
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=blue
+]
+{3 - x};
+\addplot[
+    domain=-5:5,
+    samples=100,
+    color=red
+]
+{3 - x};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
