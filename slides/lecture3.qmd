@@ -273,7 +273,7 @@ $x$ & $y$ \\
 
 2. If you know two points $(x_1, y_1)$ and $(x_2, y_2)$ on the line, you can use the slope formula to find $m$ and then use $y = mx + b$ to find $b$.
 
-3. If you know the slope $m$ and the $y$-intercept $b$, you can use $y = mx + b$ directly (this is the slope-intercept or point-slope form).
+3. If you know the slope $m$ and the $y$-intercept $b$, you can use $y = mx + b$ directly (this is the slope-intercept form)
 
 # Graphing equation systems
 

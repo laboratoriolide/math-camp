@@ -73,7 +73,7 @@ $$\log_b(x) = y \iff b^y = x$$
 - As icky as they might seem, logarithms are our friends **because of their properties**.
 
 - When dealing with variable exponentials, logarithms can help us simplify the problem.
-    - Use the power rule to bring down the exponent and easily differentiate.
+    - Use the power rule to bring down the exponent.
 
 - Natural logarithms are particularly useful for the social sciences.
     - They are used in growth models because of the Euler's number relationship to percent growth.
