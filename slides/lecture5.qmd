@@ -20,25 +20,161 @@ include-in-header:
 # What is a quantitative model?
 
 - A model represents a simplified version of reality.
-    - It is a tool to understand and predict the behavior of a system.
-    - It is a way to test hypotheses and theories.
+        - It is a tool to understand and predict the behavior of a system.
+        - It is a way to test hypotheses and theories.
 
 - We focus on simplified realities because sometimes we don't care about all the details.
-    - Details are irrelevant to the question we are asking.
-    - It is easier to first understand the simple situation, then extend.
+        - Details are irrelevant to the question we are asking.
+        - It is easier to first understand the simple situation, then extend.
 
-- A quantitative model is a model that uses quantitative information (numbers, equations, etc) to represent the real-world system.
-    - We can later use this model to make predictions and test hypotheses.
-    - Data can be used to validate or invalidate the model.
-    - Public policy decisions can be made based on the model.
+- A quantitative model is a model that is a model that uses quantitative information (numbers, equations, etc) to represent the real-world system.
+        - We can later use this model to make predictions and test hypotheses.
+        - Data can be used to validate or invalidate the model.
+        - Public policy decisions can be made based on the model.
 
 # Social science models
 
 - Social scientists use models to understand how humans interact with their reality.
+        - Demand and supply
+        - Rational voting
+        - Item response theory
+        - Logistic growth
+        - Epidemiological transition
 
 - In this lecture we focus on the common language of social science models
-    - "Parameters", "Variables", "Constants"
-    - "Exogenous"/"Endogenous"
-    - "Equilibrium", "Stability", "Dynamics"
-    - "Independent"/"Dependent" - "Explanatory"/"Explained"
-    - "Functions", "Functional form", "Equations", "Assumptions"
+        - "Parameters", "Variables", "Constants"
+        - "Exogenous"/"Endogenous"
+        - "Equilibrium", "Stability", "Dynamics"
+        - "Independent"/"Dependent" - "Explanatory"/"Explained"
+        - "Functions", "Functional form", "Equations", "Assumptions"
+        - Reduced form models, Structural models
+
+# The parts of a model: variables
+
+- **Variables**: Represent the quantities that **change** in the model.
+
+- Sometimes whether something in the model changes might not be obvious
+        - Depends in the context of the model.
+        - Depends on the question we are asking i.e. the focus of the model.
+        - Depends on the **assumptions** we make.
+
+- In a statistical validation of a model, we collect data on variables to see if the model is correct.
+
+- Variables can be **exogenous** or **endogenous**.
+    - **Exogenous**: Determined outside the model.
+     - **Endogenous**: Determined inside the model.
+
+# Example: Supply and demand
+
+- The supply and demand model has two endogenous variables: price and quantity.
+    - Determined by the model: the intersection of the curves and the ultimate focus of the model.
+
+- Exogenous variables include demand and supply shifters: income, preferences, technology, etc.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw[->] (0,0) -- (3,0) node[right] {$Q$};
+        \draw[->] (0,0) -- (0,3) node[above] {$P$};
+        \draw[domain=0:2.5] plot (\x, {3 - \x}) node[right] {Demand};
+        \draw[domain=0:2.5] plot (\x, {\x}) node[right] {Supply};
+    \end{tikzpicture}
+    \caption{Supply and demand model}
+\end{figure}
+
+# The parts of a model: assumptions
+
+- **Assumptions**: Represent the **fixed** conditions in the model.
+        - They are the conditions that must be met for the model to be valid.
+        - They are the conditions that allow us to make predictions.
+        - They are the conditions that allow us to test hypotheses.
+
+- We often say that models "assume away" certain things. This is because we simplify the world so that our simpler logic applies.
+
+- Assumptions create the model structure, and have a direct impact on the model's predictions.
+    - Bad models often mean bad assumptions.
+    - A lot of research work, even empirical, is about validating assumptions from theory.
+
+# Example: Supply and demand
+
+- The very basic supply and demand model has several assumptions, among them that of perfect competition.
+    - This assumption allows us to derive the supply and demand curves.
+    - This assumption allows us to derive the equilibrium price and quantity.
+
+- If we relax the assumption of perfect competition typically changes the conclusions of the model.
+    - E.g. Monopoly: Higher prices, lower quantities, lower consumer surplus.
+
+# The parts of a model: parameters
+
+- **Parameters**: Represent the **fixed** values in the model.
+    - They are the values that determine the behavior of the model.
+    - They are the values that we can change to see how the model behaves.
+    - They are the values that we can estimate from data.
+    
+- Parameters are used to represent values of the model which do not vary.
+    - We typically do not know the values of the parameters, but may have an idea of their range (i.e. positive or negative.)
+    - Sometimes, we make simplifying assumptions about parameters (i.e. assume unitary elasticity).
+
+# Example: Demand curve estimation
+
+- Assuming linear supply and demand curves, we can estimate the parameters of the model. For example, the demand curve can be written as:
+$$Q = a+bP$$
+
+- The parameters $a$ and $b$ are fixed values which we can't observe directly (so are not variables).
+    - But we know that $b$ is probably negative (law of demand).
+    - We can estimate $a$ and $b$ from data, and use them to make predictions.
+
+# Application: The concept of elasticity
+
+- **Elasticity**: A measure of how much one variable changes in response to a change in another variable.
+
+$$ \text{Elasticity of Y with respect to X} =  \dfrac{ \% \Delta Y}{ \% \Delta X}$$
+
+- Elasticity can be derived theoretically from models and estimated empirically from data.
+    - It is a parameter of the model.
+    - It is a measure of how sensitive the model is to changes in the exogenous variables.
+
+- The price elasticity of demand is simply the $b$ parameter times the price divided by the quantity.
+
+# Application: The concept of elasticity
+
+- Other important elasticities include income elasticity, wage income to education, education to grades, wage elasticity of labour supply, elasticity of intergenerational mobility, tax elasticity, fertility elasticity, housing elasticity, elasticity of crime with respect to police, etc.
+
+- Public policy decisions can be made based on elasticities because of their predictive power.
+    - For example, if the price elasticity of demand for cigarettes is high, then a tax increase will reduce consumption.
+    - If the elasticity of intergenerational mobility is low, then policies to increase mobility are needed.
+
+- Having estimated a value of elasticity (i.e. 20%), we multiply it times the change we believe something exert on the $X$ variable to get the change in the $Y$ variable we'd expect.
+    - Not always the elasticity is linear, but it is an approximation.
+
+# Equilibrium
+
+- **Equilibrium**: The point where the model is in balance.
+    - The point where the model is stable.
+    - The point where the model is not changing.
+    - The point where the model is at rest.
+
+- Equilibrium is a key concept in social science models.
+    - Changes in the model are often about moving towards equilibrium.
+    - It is hard to predict what will happen if the model is not in equilibrium.
+    - Equilibrium is often the focus of the model.
+
+# Example: Shifts and movements along the supply and demand curves
+
+- The equilibrium price and quantity are the points where the supply and demand curves intersect.
+
+- An exogenous change (a change in consumer preferences, for example) will shift the demand curve. This moves the equilibrium point.
+
+<!-- draw a shift in demand in tikz -->
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        \draw[->] (0,0) -- (3,0) node[right] {$Q$};
+        \draw[->] (0,0) -- (0,3) node[above] {$P$};
+        \draw[domain=0:2.5] plot (\x, {3 - \x}) node[right] {D'};
+        \draw[domain=0:2.5] plot (\x, {\x}) node[right] {S};
+        \draw[domain=0:2.5] plot (\x, {2.5 - \x}) node[right] {D};
+    \end{tikzpicture}
+    \caption{Shift in demand}
+\end{figure}
