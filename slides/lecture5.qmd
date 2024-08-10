@@ -44,7 +44,7 @@ include-in-header:
 - In this lecture we focus on the common language of social science models
         - "Parameters", "Variables", "Constants"
         - "Exogenous"/"Endogenous"
-        - "Equilibrium", "Stability", "Dynamics"
+        - "Equilibrium", "Stability"
         - "Independent"/"Dependent" - "Explanatory"/"Explained"
         - "Functions", "Functional form", "Equations", "Assumptions"
         - Reduced form models, Structural models
@@ -178,3 +178,19 @@ $$ \text{Elasticity of Y with respect to X} =  \dfrac{ \% \Delta Y}{ \% \Delta X
     \end{tikzpicture}
     \caption{Shift in demand}
 \end{figure}
+
+# Independent and dependent variables
+
+- In an estimation context, it is often heard that we categorize variables as independent and dependent. 
+
+- **Independent variables**: Variables that we have full control over, and are generally not affected by other variables in the model.
+
+- **Dependent variables**: Variables that are affected by other variables in the model, generally the *independent* variables.
+
+- In the social sciences, where we rely on observational rather than experimental studies, I argue that these are not the best terms to use.
+    - Independent variables, while are often exogenous, are not always under our control or might be indirectly affected by other variables.
+    - Observational studies need to apply sophisticated techniques to control for confounding variables.
+
+- Rather, one should use the term *explanatory* and *explained* variables.
+    - The explanatory variables are the ones that we use to explain the behavior of the explained variables.
+    - The explained variables are the ones that we are trying to understand (dependent variables).
