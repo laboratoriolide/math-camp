@@ -204,3 +204,61 @@ $$ \text{Elasticity of Y with respect to X} =  \dfrac{ \% \Delta Y}{ \% \Delta X
 - Other terms that are used are *predictor* and *response* variables.
     - Regressor and regressand.
     - Covariate and outcome.
+
+# Functions
+
+- **Functions**: A relationship between variables.
+
+- In an estimation context, we hear function a lot. For example, the demand function, the supply function, the production function, the utility function, etc.
+    - These are relationships between variables that we can estimate from data.
+    - These are relationships that we can use to make predictions.
+
+- Within fields, a lot of functions are well-known and have been estimated many times, so it is important to know that researchers refer to them as functions.
+ 
+- For example:
+    - The demand function: $Q = a + bP$
+    - The production function: $Q = f(K,L)$
+    - The popularity function (presidential approval)
+
+# Identities
+
+- **Identities**: A relationship between variables that is always true.
+
+- An identity is a special type of function that is always true.
+    - For example, the accounting identity in macroeconomics: $Y = C + I + G + NX$
+    - Also, the accounting equation in a business context: $A = L + E$
+
+- You can think of these as true by definition.
+    - They are useful for understanding the relationships between variables, and for checking the validity of a model.
+    - Often are restricting assumptions in a model.
+
+# Functional form
+
+- **Functional form**: The way that a function is written, referring often to the polinoimial degree of the function or the type of function.
+
+- The functional form of a function is important because it determines the shape of the relationship between variables.
+    - For example, a linear function has a different shape than a quadratic function.
+
+- The functional form is often determined by the theory behind the model, but researchers often try different functional forms to see which one fits the data best.
+
+# Reduced form vs. structural estimation of models
+
+- In empirical work, we often hear about reduced form and structural models.
+
+- Structural estimation means taking the model very seriously, and estimating the parameters of the model directly.
+    - For example, estimating the parameters of the supply and demand model directly from data.
+    - This is often difficult because the model is complex and the parameters are hard to estimate.
+    - Requires a lot of strong math skills and often advanced statistical techniques.
+
+# Reduced form vs. structural estimation of models
+
+- Reduced form estimation means estimating the parameters of the model indirectly, by estimating the relationship between the variables.
+    - For example, estimating the price elasticity of demand from data.
+    - This is often easier because the model is simpler and the parameters are easier to estimate.
+    - Requires less math skills and often simpler statistical techniques.
+
+- Both approaches have their advantages and disadvantages, and are often used together in empirical work.
+
+- Modern work has seen a pronounced shift towards reduced form estimation, as it is often easier to estimate and more robust to assumptions.
+    - Causal inference is often implemented in reduced form models.
+    - In this program we will mostly learn about reduced form methods and read about reduced form papers.
