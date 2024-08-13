@@ -1,0 +1,296 @@
+---
+title: Math for the Social Sciences Module - Young Researchers Fellowship
+subtitle: Lecture 5 - Single Variable Calculus
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: Daniel Sánchez Pazmiño
+date: 2024-01-01
+theme: berlin
+date-format: "YYYY"
+format: beamer
+fontsize: 10pt
+include-in-header:
+    - text: |
+        \setbeamercolor{background canvas}{bg=white}
+        \setbeamertemplate{caption}[numbered]
+        \usecolortheme[named=black]{structure}
+        \usepackage{tikz}
+        \usepackage{pgfplots}
+---
+
+# What is Calculus?
+
+- Calculus is the mathematical study of change.
+
+- It has two main branches:
+    - **Differential calculus**: studies the rate at which quantities change.
+    - **Integral calculus**: studies the accumulation of quantities.
+
+- Calculus is used in many fields, including physics, engineering, economics, and social sciences.
+
+# Differential Single Variable Calculus
+
+- Single variable calculus deals with functions of one variable.
+
+- Functions of one variable are functions that take a single input and produce a single output. This is usually denoted as:
+
+$$f: \mathbb{R} \to \mathbb{R}$$
+
+- Differential calculus studies the rate at which functions change. Hence, rates of change are the main focus of this branch of calculus.
+
+# Rates of Change
+
+- Remember variations $\Delta x$ and $\Delta y$? Rates of change for functions are not too different from these. 
+
+- The rate of change of a function $f(x)$ at a point $x = a$ represents how much the function changes as $x$ changes by a small amount $\Delta x$ around $a$. 
+
+- The concept of slope is crucial to understand rates of change, as it is the ratio of the change in $y$ to the change in $x$.
+
+- The slope is not constant for all functions. It can change depending on the point at which it is calculated.
+
+# Slopes and Tangent Lines
+
+- The slope of the tangent line to the graph of $f(x)$ at $x = a$ is the rate of change of $f(x)$ at $x = a$.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=0.7]
+        \begin{axis}[
+            axis lines = middle,
+            xlabel = $x$,
+            ylabel = $y$,
+            xmin=-1, xmax=5,
+            ymin=-1, ymax=10,
+            grid = major,
+            width=10cm,
+            height=8cm,
+            domain=0:4,
+            samples=100
+        ]
+        % Plot the function f(x) = x^2
+        \addplot[
+            color=blue,
+            thick
+        ]{x^2} node[right] {$f(x) = x^2$};
+        
+        % Plot the tangent line at x = 1
+        \addplot[
+            color=red,
+            dashed
+        ]{2*x - 1} node[above] {Tangent at $x = 1$};
+        
+        % Plot the tangent line at x = 3
+        \addplot[
+            color=green,
+            dashed
+        ]{6*x - 9} node[above] {Tangent at $x = 3$};
+        
+        % Mark the points of tangency
+        \addplot[
+            only marks,
+            mark=*,
+            color=black
+        ] coordinates {(1, 1) (3, 9)};
+        
+        \end{axis}
+    \end{tikzpicture}
+    \caption{Curve $f(x) = x^2$ and its tangent lines at $x = 1$ and $x = 3$}
+\end{figure}
+
+# Derivatives
+
+- Because rates of change are not constant, it makes sense to define a function that gives the rate of change of another function at any point.
+
+- This function is called the **derivative** (or the first derivative). It is denoted as $f'(x)$ or $\dfrac{df}{dx}$.
+
+- The derivative of a function $f(x)$ at a point $x = a$ is the slope of the tangent line to the graph of $f(x)$ at $x = a$.
+
+- The derivative of a function $f(x)$ is itself a function that gives the rate of change of $f(x)$ at any point.
+
+# A brief mention of limits
+
+- The derivative of a function $f(x)$ at a point $x = a$ is defined as the limit of the average rate of change of $f(x)$ as $x$ approaches $a$.
+
+- Limits are a fundamental concept in calculus. They are used to define derivatives, integrals, and many other concepts in calculus.
+
+- Limits are an operator which gives the value that a function **approaches** as the input approaches a certain value. It makes sense to think of them as the value that a function gets closer and closer to as the input gets closer and closer to a certain value.
+
+- There are many rules and properties of limits that are used to calculate them. We will not cover them in this lecture, but they are crucial to understand calculus, and you should review them if you want to learn more about calculus.
+
+# The Derivative of a Function
+
+- The derivative of a function $f(x)$ at a point $x = a$ is defined as:
+
+$$f'(a) = \lim_{h \to 0} \dfrac{f(a + h) - f(a)}{h}$$
+
+- This definition gives the slope of the tangent line to the graph of $f(x)$ at $x = a$.
+
+- The derivative of a function $f(x)$ is itself a function that gives the rate of change of $f(x)$ at any point.
+
+- The derivative of a function $f(x)$ is denoted as $f'(x)$ or $\dfrac{df}{dx}$.
+
+# Derivatives without limits
+
+- Thankfully, we don't really need limits to calculate derivatives for most functions.
+
+- The rules of differentiation allow us to calculate the derivative of a function without using limits, but rather relatively simple algebraic manipulations.
+
+1. **Power rule**: If $f(x) = x^n$, then $f'(x) = nx^{n-1}$.
+
+2. **Sum rule**: If $f(x) = g(x) + h(x)$, then $f'(x) = g'(x) + h'(x)$.
+
+3. **Product rule**: If $f(x) = g(x)h(x)$, then $f'(x) = g'(x)h(x) + g(x)h'(x)$.
+
+4. **Quotient rule**: If $f(x) = \dfrac{g(x)}{h(x)}$, then $f'(x) = \dfrac{g'(x)h(x) - g(x)h'(x)}{(h(x))^2}$.
+
+5. **Chain rule**: If $f(x) = g(h(x))$, then $f'(x) = g'(h(x))h'(x)$.
+
+# More properties of derivatives
+
+- The derivative of a constant is zero: If $f(x) = c$, then $f'(x) = 0$.
+
+- The derivative of the identity function is one: If $f(x) = x$, then $f'(x) = 1$.
+
+- For the exponential function $f(x) = a^x$, the derivative is $f'(x) = a^x \ln(a)$.
+
+- For the natural logarithm function $f(x) = \ln(x)$, the derivative is $f'(x) = \dfrac{1}{x}$.
+
+- For the trigonometric functions, the derivatives are as follows:
+    - $\sin(x)$: $\cos(x)$
+    - $\cos(x)$: $-\sin(x)$
+    - $\tan(x)$: $\sec^2(x)$
+    - $\cot(x)$: $-\csc^2(x)$
+    - $\sec(x)$: $\sec(x)\tan(x)$
+    - $\csc(x)$: $-\csc(x)\cot(x)$
+
+# Example: Derivative of a power function
+
+- Let's calculate the derivative of the function $f(x) = x^2$.
+
+- Using the power rule, we have:
+
+$$f'(x) = 2x^{2-1} = 2x$$
+
+- Therefore, the derivative of $f(x) = x^2$ is $f'(x) = 2x$.
+
+# Example: Derivative of a sum
+
+- Let's calculate the derivative of the function $f(x) = x^2 + 3x$.
+
+- Using the sum rule, we have:
+
+$$f'(x) = (x^2)' + (3x)' = 2x + 3$$
+
+- Therefore, the derivative of $f(x) = x^2 + 3x$ is $f'(x) = 2x + 3$.
+
+# Example: Derivative of a product
+
+- Let's calculate the derivative of the function $f(x) = x^2 \cdot \sqrt(x)$
+
+- Using the product rule and the power rule, we have:
+$$f'(x) = (x^2)' \cdot \sqrt(x) + x^2 \cdot (\sqrt(x))'$$
+
+$$f'(x) = 2x \cdot \sqrt(x) + x^2 \cdot \dfrac{1}{2\sqrt(x)}$$
+$$f'(x) = 2x\sqrt(x) + \dfrac{x^2}{2\sqrt(x)}$$
+
+# Example: Applying the chain rule
+
+- Let's calculate the derivative of the function $f(x) = (x^2 + 1)^3$.
+
+- The chain rule involves two functions: the outer function $g(x) = x^3$ and the inner function $h(x) = x^2 + 1$.
+
+- Using the chain rule, we have:
+
+$$f'(x) = 3(x^2 + 1)^2 \cdot (2x)$$
+
+$$f'(x) = 6x(x^2 + 1)^2$$
+
+# Applications: the concept of marginality
+
+- In many fields, the derivative of a function has a special meaning.
+
+- The concept of **margin** is crucial in many fields, denoting the **additional** or **incremental** change in a quantity, given a small change in another quantity.
+
+- The derivative of a function represents the marginal change in the function with respect to the input.
+
+- Marginal products, marginal costs, marginal revenues, and marginal utilities are all examples of marginal quantities that are calculated using derivatives.
+
+# Example: marginal products
+
+Consider the Cobb-Douglas production function:
+
+$$Q = L^{0.3}K^{0.7}$$
+
+with $L$ representing labor and $K$ representing capital, and with $Q$ representing output. In the short run, capital is fixed at $K = 100$.
+
+# Example: marginal products
+
+What is the marginal product of labor? This means we need to calculate the derivative of the production function with respect to labor.
+
+First, we need to substitute $K = 100$ into the production function:
+
+$$Q = L^{0.3}100^{0.7} = 100^{0.7}L^{0.3}$$
+
+Now, we can calculate the derivative of $Q$ with respect to $L$:
+
+$$\dfrac{dQ}{dL} = 0.3 \cdot 100^{0.7}L^{-0.7} = 0.3 \cdot 100^{0.7}L^{-0.7}$$
+
+# Single variable optimization
+
+- Optimization is a key concept in the social sciences and many other fields.
+
+- Optimization involves finding the maximum or minimum value of a function, sometimes subject to constraints.
+
+- Calculus, and specifically derivatives, are crucial tools for optimization.
+
+- In single-variable optimization, we are interested in finding the maximum or minimum value of a function of one variable.
+
+- For now, we will focus on finding the maximum or minimum value of a function without constraints.
+
+# Critical points
+
+- Critical points are points at which the derivative of a function is zero or undefined.
+
+- Critical points are important because they can be local maxima, local minima, or saddle points.
+    - Local maxima are points where the function reaches a maximum value in a small neighborhood.
+    - Local minima are points where the function reaches a minimum value in a small neighborhood.
+    - Saddle points are points where the function is neither a maximum nor a minimum.
+
+- To find the critical points of a function, we need to find the values of $x$ for which $f'(x) = 0$ or $f'(x)$ is undefined.
+
+# Example: Finding critical points
+
+Consider the function $f(x) = x^3 - 3x^2 + 2x$.
+
+To find the critical points of $f(x)$, we need to find the values of $x$ for which $f'(x) = 0$ or $f'(x)$ is undefined.
+
+First, we need to calculate the derivative of $f(x)$:
+
+$$f'(x) = 3x^2 - 6x + 2$$
+
+Now, we need to find the values of $x$ for which $f'(x) = 0$:
+
+$$3x^2 - 6x + 2 = 0$$
+
+# Example: Finding critical points
+
+$$x = \dfrac{6 \pm \sqrt{(-6)^2 - 4 \cdot 3 \cdot 2}}{2 \cdot 3}$$
+
+$$x = \dfrac{6 \pm \sqrt{36 - 24}}{6}$$
+
+$$x = \dfrac{6 \pm \sqrt{12}}{6}$$
+
+$$x = \dfrac{6 \pm 2\sqrt{3}}{6}$$
+
+$$x = 1 \pm \dfrac{\sqrt{3}}{3}$$
+
+# Example: Finding critical points
+
+- Therefore, the critical points of the function $f(x) = x^3 - 3x^2 + 2x$ are $x = 1 + \dfrac{\sqrt{3}}{3}$ and $x = 1 - \dfrac{\sqrt{3}}{3}$.
+
+- To determine whether these points are local maxima, local minima, or saddle points, we need to analyze the behavior of the function around these points.
+
+- There are four ways to do this:
+    - Use the second derivative test (we will cover this later)
+    - Look at the chart of the function around the critical points.
+
+# Example: Finding critical points
