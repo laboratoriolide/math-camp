@@ -1,6 +1,6 @@
 ---
 title: Math for the Social Sciences Module - Young Researchers Fellowship
-subtitle: Lecture 5 - Single Variable Calculus
+subtitle: Lecture 6 - Single Variable Calculus
 institute: Laboratorio de Investigación para el Desarrollo del Ecuador
 author: Daniel Sánchez Pazmiño
 date: 2024-01-01
