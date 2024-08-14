@@ -134,6 +134,8 @@ $$f'(a) = \lim_{h \to 0} \dfrac{f(a + h) - f(a)}{h}$$
 
 - The rules of differentiation allow us to calculate the derivative of a function without using limits, but rather relatively simple algebraic manipulations.
 
+# Rules of Differentiation
+
 1. **Power rule**: If $f(x) = x^n$, then $f'(x) = nx^{n-1}$.
 
 2. **Sum rule**: If $f(x) = g(x) + h(x)$, then $f'(x) = g'(x) + h'(x)$.
