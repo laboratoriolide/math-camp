@@ -25,7 +25,7 @@ A researcher evaluates the satisfaction of a group of individuals with respect t
 
 # Problem 2: Demand elasticity with calculus
 
-Consider the demand function $Q = 100 - 2P$. The price elasticity of demand $\epsilon$ can be calculated using the derivative of demand function, as follows:
+Consider the demand function $Q = 100 - 2P$. The price elasticity of demand $\varepsilon$ can be calculated using the derivative of demand function, as follows:
 
 $$ \varepsilon = \frac{dQ}{dP} \cdot \frac{P}{Q} $$
 
