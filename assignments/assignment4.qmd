@@ -1,0 +1,59 @@
+---
+title: Assignment 4
+subtitle: Math for the Social Sciences
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: "Young Researchers Fellowship"
+date: 2024-08-14
+format: pdf
+---
+
+Complete the following exercises. Due date is August 19, 2024.
+
+# Problem 1: Elasticities
+
+A researcher evaluates the satisfaction of a group of individuals with respect to a number of different things that they spend time doing. The score for satisfaction is given in a 1-10 scale, where 1 is the lowest satisfaction and 10 is the highest. The researcher also collects data on the time spent on each activity, in minutes per week. 
+
+1. It is found that the elasticity of satisfaction with respect to time spent programming in R is 0.9. What does this mean?
+
+2. The researcher also finds that the elasticity of satisfaction with respect to time spent writing code in Stata is -0.5. What does this mean? How does it compare to the result in the previous question? 
+
+3. As the researcher's assistant, you've collected data on time spent on social media and found that in average, people spend 120 minutes per week on social media. There is an observed increase from an average score of 5 to 6 in satisfaction when the time spent on social media increases from 120 to 130 minutes per week. What would your best estimate of the elasticity of satisfaction with respect to time spent on social media be? 
+
+4. Using your answer to the previous question, what would be the expected change in satisfaction if the time spent on social media were to increase by 10%?
+
+5. The researcher also finds that the elasticity of satisfaction with respect to time spent on exercise is -0.3. What does this mean? How does it compare to the results in the previous questions? Do you believe it makes sense? Prepare a short argument to support your answer.
+
+# Problem 2: Demand elasticity with calculus
+
+Consider the demand function $Q = 100 - 2P$. The price elasticity of demand $\epsilon$ can be calculated using the derivative of demand function, as follows:
+
+$$ \varepsilon = \frac{dQ}{dP} \cdot \frac{P}{Q} $$
+
+where $P$ and $Q$ is the price and quantity at which I'd like to get my elasticity for. 
+
+1. Calculate the price elasticity of demand for the demand function $Q = 100 - 2P$ at the price $P = 10$.
+
+2. If the price were to increase by 10%, what would be the percentage change in quantity demanded?
+
+# Problem 3: Optimization
+
+Consider the function $f(x) = 2x^2 - 4x + 1$.
+
+1. Find the critical points of the function.
+
+2. Determine whether the critical points are local maxima, local minima, or saddle points. Prepare a graph to support your answer.
+
+3. Find the global maximum and minimum of the function.
+
+4. If this function represents the cost of producing $x$ units of a good, do the answer to the previous questions make any real sense? Why or why not? What about if the function represented the utility (satisfaction) of voting for a certain political candidate?
+
+# Problem 4: Chain rule differentiation
+
+Consider the function $f(x) = \ln(2x^2 + 3x + 1)$.
+
+1. Calculate the derivative of the function.
+
+2. Calculate the second derivative of the function.
+
+3. Find the critical points of the function.
+
