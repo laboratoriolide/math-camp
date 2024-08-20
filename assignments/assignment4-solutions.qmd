@@ -1,0 +1,193 @@
+---
+title: Assignment 4 - Solutions Manual
+subtitle: Math for the Social Sciences
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: "Young Researchers Fellowship"
+date: 2024-08-14
+format: pdf
+include-in-header:
+    - text: |
+        \usepackage{tikz}
+        \usepackage{pgfplots}
+---
+
+# Problem 1: Elasticities
+
+A researcher evaluates the satisfaction of a group of individuals with respect to a number of different things that they spend time doing. The score for satisfaction is given in a 1-10 scale, where 1 is the lowest satisfaction and 10 is the highest. The researcher also collects data on the time spent on each activity, in minutes per week. 
+
+1. It is found that the elasticity of satisfaction with respect to time spent programming in R is 0.9. What does this mean?
+
+The elasticity of satisfaction with respect to time spent programming in R is 0.9. This means that for every 1% increase in the time spent programming in R, satisfaction increases by 0.9%. We may conclude that people enjoy programming in R, and the more time they spend doing it, the more satisfied they are. 
+
+**Note:** If we are driven by a inelastic/elastic classification, we can say that the satisfaction with respect to time spent programming in R is inelastic, as the elasticity is less than 1. This means that the percentage change in satisfaction is less than the percentage change in time spent programming in R. This, however, does not mean that people are not satisfied with programming in R.
+
+2. The researcher also finds that the elasticity of satisfaction with respect to time spent writing code in Stata is -0.5. What does this mean? How does it compare to the result in the previous question? 
+
+The elasticity of satisfaction with respect to time spent writing code in Stata is -0.5. This means that for every 1% increase in the time spent writing code in Stata, satisfaction decreases by 0.5%. We may conclude that people do not enjoy writing code in Stata, as their satisfaction decreases with the time spent doing it. It would be safe to say that, on average, people enjoy programming in R more than writing code in Stata.
+
+3. As the researcher's assistant, you've collected data on time spent on social media and found that in average, people spend 120 minutes per week on social media. There is an observed increase from an average score of 5 to 6 in satisfaction when the time spent on social media increases from 120 to 130 minutes per week. What would your best estimate of the elasticity of satisfaction with respect to time spent on social media be? 
+
+The elasticity of satisfaction with respect to time spent on social media can be calculated as follows:
+
+$$ \varepsilon = \frac{\Delta S}{\Delta T} \cdot \frac{T}{S} $$
+
+where $\Delta S$ is the change in satisfaction, $\Delta T$ is the change in time spent on social media, $T$ is the average time spent on social media, and $S$ is the average satisfaction score.
+
+Given that $\Delta S = 6 - 5 = 1$, $\Delta T = 130 - 120 = 10$, $T = 120$, and $S = 5$, we can calculate the elasticity as:
+
+$$ \varepsilon = \frac{1}{10} \cdot \frac{120}{5} = 2.4 $$
+
+Therefore, the elasticity of satisfaction with respect to time spent on social media is 2.4. This means that for every 1% increase in the time spent on social media, satisfaction increases by 2.4%. People seem to enjoy spending time on social media, and the more time they spend doing it, the more satisfied they are.
+
+4. Using your answer to the previous question, what would be the expected change in satisfaction if the time spent on social media were to increase by 10%?
+
+If the time spent on social media were to increase by 10%, the expected change in satisfaction can be calculated as:
+
+$$ \Delta S = \varepsilon \cdot \Delta T = 2.4 \cdot 0.1 = 0.24 $$
+
+Therefore, the expected change in satisfaction if the time spent on social media were to increase by 10% would be 0.24. This means that satisfaction would increase by 0.24 points on average.
+
+5. The researcher also finds that the elasticity of satisfaction with respect to time spent on exercise is -0.3. What does this mean? How does it compare to the results in the previous questions? Do you believe it makes sense? Prepare a short argument to support your answer.
+
+The elasticity of satisfaction with respect to time spent on exercise is -0.3. This means that for every 1% increase in the time spent on exercise, satisfaction decreases by 0.3%. People seem to be less satisfied with the time spent on exercise, as their satisfaction decreases with the time spent doing it. 
+
+Whether this result makes sense or not is something that depends on the context. Many people say that doing exercise is enjoyable and good for health, so one would expect that satisfaction would increase with the time spent on exercise. However, there are also people who find exercise tiring, boring, or unpleasant, which could explain why satisfaction decreases with the time spent on exercise. Therefore, the negative elasticity of satisfaction with respect to time spent on exercise may make sense depending on the individual preferences and experiences of the people surveyed.
+
+# Problem 2: Demand elasticity with calculus
+
+Consider the demand function $Q = 100 - 2P$. The price elasticity of demand $\varepsilon$ can be calculated using the derivative of demand function, as follows:
+
+$$ \varepsilon = \frac{dQ}{dP} \cdot \frac{P}{Q} $$
+
+where $P$ and $Q$ is the price and quantity at which I'd like to get my elasticity for. 
+
+1. Calculate the price elasticity of demand for the demand function $Q = 100 - 2P$ at the price $P = 10$.
+
+The price elasticity of demand can be calculated as follows:
+
+$$ \varepsilon = \frac{dQ}{dP} \cdot \frac{P}{Q} = -2 \cdot \frac{10}{100 - 2 \cdot 10} = -2 \cdot \frac{10}{80} = -0.25 $$
+
+Therefore, the price elasticity of demand for the demand function $Q = 100 - 2P$ at the price $P = 10$ is -0.25.
+
+2. If the price were to increase by 10%, what would be the percentage change in quantity demanded?
+
+The percentage change in quantity demanded can be calculated using the price elasticity of demand as follows:
+
+$$ \text{Percentage change in quantity demanded} = \varepsilon \cdot \text{Percentage change in price} = -0.25 \cdot 0.1 = -0.025 $$
+
+Therefore, if the price were to increase by 10%, the percentage change in quantity demanded would be -2.5%. This means that quantity demanded would decrease by 2.5%.
+
+# Problem 3: Optimization
+
+Consider the function $f(x) = 2x^2 - 4x + 1$.
+
+1. Find the critical points of the function.
+
+The critical points of the function can be found by taking the derivative of the function and setting it equal to zero:
+
+$$ f'(x) = 4x - 4 = 0 $$
+
+Solving for $x$:
+
+$$ 4x - 4 = 0 \Rightarrow 4x = 4 \Rightarrow x = 1 $$
+
+Therefore, the critical point of the function is $x = 1$.
+
+2. Determine whether the critical points are local maxima, local minima, or saddle points. Prepare a graph to support your answer.
+
+To determine whether the critical point is a local maximum, local minimum, or saddle point, we can use the second derivative test. The second derivative of the function is:
+
+$$ f''(x) = 4 $$
+
+Since the second derivative is positive, the critical point $x = 1$ is a local minimum. See a rough sketch of the function below:
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = $x$,
+    ylabel = $f(x)$,
+    xmin = -2,
+    xmax = 4,
+    ymin = -2,
+    ymax = 10,
+]
+\addplot [
+    domain=-2:4, 
+    samples=100, 
+    color=blue,
+]
+{2*x^2 - 4*x + 1};
+\addplot [
+    mark=*,
+    mark options={fill=red, scale=0.5},
+    color=red,
+]
+coordinates {(1, -1)};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+3. Find the global maximum and minimum of the function.
+
+By looking at the graph, we can see that the function has a global minimum at $x = 1$. Therefore, the global minimum of the function is $f(1) = 2 \cdot 1^2 - 4 \cdot 1 + 1 = -1$.
+
+Since the function is a parabola that opens upwards, it does not have a global maximum.
+
+4. If this function represents the cost of producing $x$ units of a good, do the answer to the previous questions make any real sense? Why or why not? What about if the function represented the utility (satisfaction) of voting for a certain political candidate?
+
+If the function represents the cost of producing $x$ units of a good, the answers to the previous questions make sense. The critical point represents the point at which the cost is minimized, which is a practical and meaningful result in the context of production costs. The global minimum represents the lowest cost of production, which is a relevant measure for decision-making.
+
+If the function represented the utility (satisfaction) of voting for a certain political candidate, I would accept several answers, depending on the explanation. Typically, utility is something that gets maximized rather than minimized, so the critical point would represent the point at which utility is maximized. The global minimum would not have a direct interpretation in this context, as utility is not something that can be minimized. However, in principle one could "minimize" dissatisfaction or negative utility, so the global minimum could represent the point at which dissatisfaction is minimized, i.e. the least bad option. This would be a less common interpretation, but it could be valid depending on the context and the explanation provided.
+
+# Problem 4: Chain rule differentiation
+
+Consider the function $f(x) = \ln(2x^2 + 3x + 1)$.
+
+1. Calculate the derivative of the function.
+
+Use the chain rule to differentiate the function, setting the inner function as $f(x) = 2x^2 + 3x + 1$ and the outer function as $g() = \ln(f(x))$:
+
+$$ \frac{d}{dx} \ln(2x^2 + 3x + 1) = \frac{1}{2x^2 + 3x + 1} \cdot \frac{d}{dx} (2x^2 + 3x + 1) $$
+
+Applying the chain rule to the derivative of the inner function:
+
+$$ \frac{d}{dx} (2x^2 + 3x + 1) = 4x + 3 $$
+
+Therefore, the derivative of the function is:
+
+$$ \frac{d}{dx} \ln(2x^2 + 3x + 1) = \frac{4x + 3}{2x^2 + 3x + 1} $$
+
+2. Calculate the second derivative of the function.
+
+To calculate the second derivative of the function, we differentiate the derivative obtained in the previous step:
+
+$$ \frac{d^2}{dx^2} \ln(2x^2 + 3x + 1) = \frac{d}{dx} \left( \frac{4x + 3}{2x^2 + 3x + 1} \right) $$
+
+Applying the quotient rule to the derivative:
+
+$$ \frac{d}{dx} \left( \frac{4x + 3}{2x^2 + 3x + 1} \right) = \frac{(2x^2 + 3x + 1) \cdot (4) - (4x + 3) \cdot (4x + 3)}{(2x^2 + 3x + 1)^2} $$
+
+Simplifying the expression:
+
+$$ \frac{d^2}{dx^2} \ln(2x^2 + 3x + 1) = \frac{8x^2 + 12x + 4 - 16x^2 - 24x - 9}{(2x^2 + 3x + 1)^2} = \frac{-8x^2 - 12x - 5}{(2x^2 + 3x + 1)^2} $$
+
+Therefore, the second derivative of the function is:
+
+$$ \frac{d^2}{dx^2} \ln(2x^2 + 3x + 1) = \frac{-8x^2 - 12x - 5}{(2x^2 + 3x + 1)^2} $$
+
+3. Find the critical points of the function.
+
+To find the critical points of the function, we set the first derivative equal to zero:
+
+$$ \frac{4x + 3}{2x^2 + 3x + 1} = 0 $$
+
+Solving for $x$:
+
+$$ 4x + 3 = 0 \Rightarrow 4x = -3 \Rightarrow x = -\frac{3}{4} $$
+
+Therefore, the critical point of the function is $x = -\frac{3}{4}$.
+
+
+
