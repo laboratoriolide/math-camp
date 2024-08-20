@@ -1,0 +1,204 @@
+---
+title: Math for the Social Sciences Module - Young Researchers Fellowship
+subtitle: Lecture 8 - A Gentle Review of Matrix Algebra
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: Daniel Sánchez Pazmiño
+date: 2024-01-01
+theme: berlin
+date-format: "YYYY"
+format: beamer
+fontsize: 10pt
+include-in-header:
+    - text: |
+        \setbeamercolor{background canvas}{bg=white}
+        \setbeamertemplate{caption}[numbered]
+        \usecolortheme[named=black]{structure}
+        \usepackage{tikz}
+        \usepackage{pgfplots}
+        \usepackage{amsmath, amssymb, amsfonts, mathtools}
+---
+
+# Why matrices?
+
+- Matrices are a way to organize data in a structured way.
+
+- When dealing with complex mathematical models or operations, using "normal" algebra can be cumbersome.
+
+- For instance, consider a four-variable system of equations:
+
+\begin{align*}
+2x + 3y + 4z + 5w &= 10 \\
+3x + 4y + 5z + 6w &= 20 \\
+4x + 5y + 6z + 7w &= 30 \\
+5x + 6y + 7z + 8w &= 40
+\end{align*}
+
+# Why matrices?
+
+- If we try to solve this system using algebra, we would have to do a lot of calculations.
+
+- For instance, we may try to solve the first equation for $x$:
+
+\begin{align*}
+2x &= 10 - 3y - 4z - 5w \\
+x &= \frac{10 - 3y - 4z - 5w}{2}
+\end{align*}
+
+- And then substitute this expression into the second equation:
+
+\begin{align*}
+3\left(\frac{10 - 3y - 4z - 5w}{2}\right) + 4y + 5z + 6w &= 20
+\end{align*}
+
+# Why matrices?
+
+- Which would then need to be simplified and solved for $y$:
+
+\begin{align*}
+\frac{30 - 9y - 12z - 15w}{2} + 4y + 5z + 6w &= 20
+\end{align*}
+
+- And so on...
+
+# Why matrices?
+
+- **Matrices** are rectangular arrays of numbers considered as a single mathematical entity.
+
+- They can help organize a system of equations or complex mathematical operations in a more structured way.
+
+- Through matrix algebra, we can perform operations on matrices quickly and efficiently.
+
+# Matrix notation
+
+- We represent a matrix with a capital letter, usually in boldface, e.g., $\mathbf{A}$.
+    - In handwritten text, matrices are often represented with capital letters in block letters, e.g., $\mathbb{A}$, or using a different color. 
+
+- Consider, for instance, the following matrix:
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 & 2 & 3 & 4 \\
+5 & 6 & 7 & 8 \\
+9 & 10 & 11 & 12 \\
+\end{bmatrix}
+\end{equation*}
+
+- We usually either use square brackets or round brackets (parentheses) to represent matrices.
+
+# Elements
+
+- The numbers in the matrix are called **elements**. They are usually represented with lowercase letters, e.g., $a_{ij}$.
+
+- We typically define the *dimension* of a matrix as the number of rows and columns it has. Thus, the matrix $A$ above is a $3 \times 4$ matrix.
+
+- To refer to a specific element in a matrix, we use the notation $a_{ij}$, where $i$ is the row number and $j$ is the column number. 
+    - For instance, in the matrix $A$ above, $a_{23} = 7$.
+
+# Matrix general form
+
+- A matrix can be represented in general form as follows:
+
+\begin{equation*}
+A =
+\begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\vdots & \vdots & \ddots & \vdots \\
+a_{m1} & a_{m2} & \cdots & a_{mn} \\
+\end{bmatrix}
+\end{equation*}
+
+- Where $m$ is the number of rows and $n$ is the number of columns.
+
+- This matrix is said to be an $m \times n$ matrix.
+
+# Vectors
+
+- A vector is a special case of a matrix that has only one column or one row.
+
+- Vectors which have only one column are called **column vectors**.
+
+- Vectors which have only one row are called **row vectors**.
+
+- For instance, consider the following column vector:
+
+\begin{equation*}
+v =
+\begin{bmatrix}
+1 \\
+2 \\
+3 \\
+4
+\end{bmatrix}
+\end{equation*}
+
+# The main diagonal
+
+- The **main diagonal** of a matrix is the set of elements that run from the top left to the bottom right of the matrix.
+
+- More formally, the main diagonal of a matrix $A$ is the set of elements $a_{ij}$ where $i = j$.
+
+- For instance, consider the following matrix:
+
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\end{equation*}
+
+- The main diagonal of this matrix is $\{1, 5, 9\}$.
+
+- Sometimes we refer to the main diagonal as only the "diagonal" of the matrix.
+
+# Special matrices
+
+- There are several types of special matrices that are commonly used, and you should be familiar with them.
+
+- **Square matrix**: A matrix where the number of rows is equal to the number of columns.
+
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\text{is a square matrix.}
+\end{equation*}
+
+# Special matrices
+
+- **Diagonal matrix**: A square matrix where all elements off the main diagonal are equal to 0.
+
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 2 & 0 \\
+0 & 0 & 3
+\end{bmatrix}
+\text{is a diagonal matrix.}
+\end{equation*}
+
+- **Note**: Sometimes, everything that is not in the main diagonal is referred to as the "off-diagonals".
+
+# Special matrices
+
+- **Identity matrix**: A square matrix where all elements on the main diagonal are equal to 1 and all other elements are equal to 0.
+
+- This matrix is usually represented by the symbol $I_n$, where $n$ is the dimension of the matrix.
+    - For instance, $I_3$ is a $3 \times 3$ identity matrix, as it always a square matrix.
+
+- The identity matrix is analogous to the number 1 in normal algebra.
+
+\begin{equation*}
+I_3 =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\end{equation*}
