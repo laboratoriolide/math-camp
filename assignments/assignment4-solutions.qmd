@@ -189,5 +189,39 @@ $$ 4x + 3 = 0 \Rightarrow 4x = -3 \Rightarrow x = -\frac{3}{4} $$
 
 Therefore, the critical point of the function is $x = -\frac{3}{4}$.
 
+If we substitute $x = -\frac{3}{4}$ into the function, we get:
+
+$$ f(-\frac{3}{4}) = \ln(2 \cdot (-\frac{3}{4})^2 + 3 \cdot (-\frac{3}{4}) + 1) = \ln(2 \cdot \frac{9}{16} - \frac{9}{4} + 1) = \ln(\frac{9}{8} - \frac{9}{4} + 1) = \ln(\frac{9}{8} - \frac{18}{8} + \frac{8}{8}) = \ln(-\frac{1}{8}) $$
+
+Since the natural logarithm is not defined for negative numbers, the critical point $x = -\frac{3}{4}$ may seem to not be valid. Examining the function's graph, we can see that the function is not defined for $x < -\frac{1}{2}$, which includes the critical point $x = -\frac{3}{4}$. This is because $x=-\frac{3}{4}$ would make the argument of the natural logarithm negative, which is not allowed. The critical point $x = -\frac{3}{4}$ is neither a local maximum nor a local minimum, but rather a point of discontinuity (a vertical asymptote) for the function. In this case, the function does not have a local maximum or minimum, but rather a point of discontinuity. I did not expect you to know this, but it is a good opportunity to learn about the possibility of a critical point being a point of discontinuity.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = left,
+    xlabel = $x$,
+    ylabel = $f(x)$,
+    xmin = -2,
+    xmax = 2,
+    ymin = -2,
+    ymax = 2,
+]
+\addplot [
+    domain=-2:2, 
+    samples=100, 
+    color=blue,
+]
+{ln(2*x^2 + 3*x + 1)};
+\addplot [
+    mark=*,
+    mark options={fill=red, scale=0.5},
+    color=red,
+]
+coordinates {(-3/4, -1/8)};
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
 
 
