@@ -110,7 +110,9 @@ a_{m1} & a_{m2} & \cdots & a_{mn} \\
 
 - Where $m$ is the number of rows and $n$ is the number of columns.
 
-- This matrix is said to be an $m \times n$ matrix.
+- This matrix is said to be an $m \times n$ matrix.\
+
+- It is common to see the dimensions of the matrix written as a subscript, e.g., $A_{m \times n}$. or $\underset{\scriptscriptstyle m\times n}{A}$
 
 # Vectors
 
@@ -152,6 +154,7 @@ A =
 - The main diagonal of this matrix is $\{1, 5, 9\}$.
 
 - Sometimes we refer to the main diagonal as only the "diagonal" of the matrix.
+
 
 # Special matrices
 
@@ -202,3 +205,11 @@ I_3 =
 0 & 0 & 1
 \end{bmatrix}
 \end{equation*}
+
+# Special matrices
+
+- **Zero matrix**: A matrix where all elements are equal to 0.
+
+- This matrix is usually represented by the symbol $O_{m \times n}$, where $m$ is the number of rows and $n$ is the number of columns.
+
+# Matrix operations
