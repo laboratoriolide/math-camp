@@ -134,6 +134,19 @@ v =
 \end{bmatrix}
 \end{equation*}
 
+# Vectors
+
+- We can also represent vectors as row vectors:
+
+\begin{equation*}
+v =
+\begin{bmatrix}
+1 & 2 & 3 & 4
+\end{bmatrix}
+\end{equation*}
+
+- We usually represent vectors with lowercase boldface letters, e.g., $\mathbf{v}$. In harndwritten text, vectors are often represented with lowercase letters in block letters, e.g., $\mathbb{v}$, or using a different color and lowercase letters.
+
 # The main diagonal
 
 - The **main diagonal** of a matrix is the set of elements that run from the top left to the bottom right of the matrix.
@@ -154,7 +167,6 @@ A =
 - The main diagonal of this matrix is $\{1, 5, 9\}$.
 
 - Sometimes we refer to the main diagonal as only the "diagonal" of the matrix.
-
 
 # Special matrices
 
@@ -583,6 +595,32 @@ A'=
 
 - The values of the inverse itself are a bit more complex to compute, and we will not cover them in this lecture; a computer can easily compute the inverse of a matrix.
 
+# Properties of the inverse of a matrix
+
+- The inverse of a matrix has several properties that are useful in matrix algebra.
+
+- **Inverse of a product**: $(AB)^{-1} = B^{-1}A^{-1}$
+- **Inverse of a transpose**: $(A')^{-1} = (A^{-1})'$
+- **Inverse of an inverse**: $(A^{-1})^{-1} = A$
+- **Inverse of an identity matrix**: $(I_n)^{-1} = I_n$
+- **Inverse of a scalar multiple**: $(kA)^{-1} = \frac{1}{k}A^{-1}$
+- **Inverse of a diagonal matrix**: $(D)^{-1} = D^{-1}$
+- **Inverse of a zero matrix**: $(O_{m \times n})^{-1}$ is undefined
+
+# Division of matrices
+
+- Division of matrices is not a standard operation in matrix algebra.
+
+- We understand division as the inverse of multiplication, but in matrix algebra, we do not have a standard operation for division.
+
+- We do the inverse of multiplication by multiplying by the inverse of the matrix. This is the closest thing we have to division in matrix algebra.
+
+- For instance, consider the equation $AX = B$. To solve for $X$, we premultiply both sides by the inverse of $A$:
+
+$$ A^{-1}AX = A^{-1}B $$
+
+- This will give us $X = A^{-1}B$. This becomes useful in defining the solution to a system of linear equations.
+
 # Linear systems of equations in matrix form
 
 - One of the most common applications of matrix algebra is in solving systems of linear equations.
@@ -598,3 +636,114 @@ A'=
 - We write systems of linear equations in the following general form:
 
 $$ Ax = B $$
+
+- Where $A$ is a matrix of coefficients, $x$ is a column vector of variables, and $B$ is a column vector of constants.
+
+# Linear systems of equations in matrix form
+
+- We write the $A$ matrix by taking the coefficients of the variables in the equations, except what is on the right side of the equal sign (the constants).
+
+$$ A = \begin{bmatrix} 2 & 3 & 4 \\ 3 & 4 & 5 \\ 4 & 5 & 6 \end{bmatrix} $$
+
+- The $x$ vector is the vector of variables we are trying to solve for:
+
+$$ x = \begin{bmatrix} x \\ y \\ z \end{bmatrix} $$
+
+- The $B$ vector is the vector of constants on the right side of the equal sign:
+
+$$ B = \begin{bmatrix} 10 \\ 20 \\ 30 \end{bmatrix} $$
+
+# Linear systems of equations in matrix form
+
+- We can then write the system of equations in matrix form as:
+
+$$ \begin{bmatrix} 2 & 3 & 4 \\ 3 & 4 & 5 \\ 4 & 5 & 6 \end{bmatrix} \begin{bmatrix} x \\ y \\ z \end{bmatrix} = \begin{bmatrix} 10 \\ 20 \\ 30 \end{bmatrix} $$
+
+- This is equivalent to the system of equations we had before if we are to perform the matrix multiplication.
+
+- Using our knowledge of matrix multiplication, we can solve this system of equations by finding the inverse of the matrix $A$ and multiplying it by the vector $B$.
+
+# Solving linear systems of equations
+
+- To solve a system of linear equations in matrix form, we should go back to the general form of the equation:
+
+$$ Ax = B $$
+
+- To solve for $x$, we multiply both sides by the inverse of $A$:
+
+$$ A^{-1}Ax = A^{-1}B $$
+
+- Since $A^{-1}A = I$, we get:
+
+$$ Ix = A^{-1}B $$
+
+# Solving linear systems of equations
+
+- Since $Ix = x$, we get:
+
+$$ x = A^{-1}B $$
+
+- This is the solution to the system of linear equations.
+
+# Solving linear systems of equations
+
+- So, to solve a system of linear equations in matrix form, we need to:
+    - Find the matrix $A$ of coefficients.
+    - Find the vector $B$ of constants.
+    - Find the inverse of the matrix $A$.
+    - Multiply the inverse of $A$ by the vector $B$.
+
+- This is a very efficient way to solve systems of linear equations, especially when the number of variables is large. 
+
+# Solving linear systems of equations
+
+- The conditions for the matrix $A$ to have an inverse are the same as for any matrix to have an inverse: it must be a square matrix and its determinant must be different from zero.
+
+- In terms of the system of equations, this means that the system must have a unique solution; if the determinant of the matrix is zero, the system has no solution or an infinite number of solutions.
+
+- Notice that, for the two-variable system of equations, being able to solve the system of equations is equivalent to the determinant of the matrix being different from zero. This means having a unique solution: not having the two lines be parallel.
+
+# The dot product
+
+- Because vectors are just special cases of matrices, we can perform the same operations on vectors as we can on matrices.
+
+- It is worth noting that the dot product (or inner or scalar product) are names for multiplications among vectors, which always end up in a scalar.
+
+$$ \mathbf{a} \cdot \mathbf{b} = a_1b_1 + a_2b_2 + \ldots + a_nb_n  = \sum_{i=1}^n a_i\cdot b_i$$
+
+where $\mathbf{a}$ and $\mathbf{b}$ are vectors of the same length $n$. 
+
+- Notice that the dot product holds no regard with whether the vectors are row or column vectors, it always "assumes" conformability. However, these necessarily have to be vectors of the same length $n$.
+
+# Dot product as matrix multiplication
+
+- The dot product can also be seen as a special case of matrix multiplication, when we multiply a row vector by a column vector.
+
+- For instance, consider the following row and column vectors of length $n$
+
+$$ \mathbf{a} = \begin{bmatrix} a_1 & a_2 & \ldots & a_n \end{bmatrix} $$
+
+$$ \mathbf{b} = \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix} $$
+
+# Dot product as matrix multiplication
+
+- The dot product of these two vectors is given by:
+
+$$ \mathbf{a} \cdot \mathbf{b} = \begin{bmatrix} a_1 & a_2 & \ldots & a_n \end{bmatrix} \begin{bmatrix} b_1 \\ b_2 \\ \vdots \\ b_n \end{bmatrix} = a_1b_1 + a_2b_2 + \ldots + a_nb_n $$
+
+- This is the same as the dot product we defined before.
+
+# Properties of the dot product
+
+- The dot product has several properties that are useful in matrix algebra.
+
+- **Commutative property**: $\mathbf{a} \cdot \mathbf{b} = \mathbf{b} \cdot \mathbf{a}$
+
+- **Distributive property**: $\mathbf{a} \cdot (\mathbf{b} + \mathbf{c}) = \mathbf{a} \cdot \mathbf{b} + \mathbf{a} \cdot \mathbf{c}$
+
+- **Distributive property**: $(k\mathbf{a}) \cdot \mathbf{b} = k(\mathbf{a} \cdot \mathbf{b}) = \mathbf{a} \cdot (k\mathbf{b})$
+
+- **Orthogonality**: If $\mathbf{a} \cdot \mathbf{b} = 0$, then $\mathbf{a}$ and $\mathbf{b}$ are orthogonal.
+
+- **Distribution of scalar over dot product**: $(k\mathbf{a}) \cdot (l\mathbf{b}) = kl(\mathbf{a} \cdot \mathbf{b})$
+
