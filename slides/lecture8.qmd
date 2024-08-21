@@ -212,4 +212,389 @@ I_3 =
 
 - This matrix is usually represented by the symbol $O_{m \times n}$, where $m$ is the number of rows and $n$ is the number of columns.
 
+# Equality of matrices
+
+- Two matrices are equal if they have the same dimensions and if their corresponding elements are equal.
+
+- Formally, two matrices $A$ and $B$ are equal if $a_{ij} = b_{ij}$ for all $i$ and $j$.
+
+- For instance, consider the following matrices:
+
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+B =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\end{equation*}
+
+
 # Matrix operations
+
+- Matrices truly shine when we start performing operations on them.
+
+- Storing large amounts of information will allow large-scale operations to be performed efficiently in the computational sense, as simple algebra can occupy too much computational power.
+
+- In this lecture, we will review the following basic operations:
+    - Scalar addition and subtraction
+    - Matrix addition and subtraction
+    - Scalar multiplication
+    - Matrix multiplication
+    - Transposition
+
+# Scalars: what are they?
+
+- We've already grown to know and love scalars in our day-to-day algebraic operations.
+
+- These are the numbers that we use to multiply or add to other numbers, such as $2$, $3$, $4$, etc.
+
+- More formally, a scalar is a single number in a field, which is a set of numbers that can be added, subtracted, multiplied, and divided.
+    - Unlike vectors and matrices, scalars are not arrays of numbers.
+
+# Scalar addition and subtraction
+
+- We can try to add or subtract a scalar to a matrix. This is done by adding or subtracting the scalar to each element of the matrix.
+
+- For instance, consider the following matrix:
+$$
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+$$
+
+- If we add the scalar $2$ to this matrix, we get:
+
+$$
+A + 2 =
+\begin{bmatrix}
+1 + 2 & 2 + 2 & 3 + 2 \\
+4 + 2 & 5 + 2 & 6 + 2 \\
+7 + 2 & 8 + 2 & 9 + 2
+\end{bmatrix}
+=
+\begin{bmatrix}
+3 & 4 & 5 \\
+6 & 7 & 8 \\
+9 & 10 & 11
+\end{bmatrix}
+$$
+
+- Substraction works in the same way.
+
+# Scalar multiplication
+
+- Scalar multiplication is the operation of multiplying a matrix by a scalar.
+
+- This is done by multiplying each element of the matrix by the scalar.
+
+- If we have the matrix $A$ from before and we multiply it by any scalar $k$, we get:
+
+$$
+kA =
+\begin{bmatrix}
+k \cdot 1 & k \cdot 2 & k \cdot 3 \\
+k \cdot 4 & k \cdot 5 & k \cdot 6 \\
+k \cdot 7 & k \cdot 8 & k \cdot 9
+\end{bmatrix}
+$$
+
+# Matrix addition and subtraction
+
+- We can also add or subtract two matrices, provided that these **have the same dimensions**.
+    - When two matrices have the same dimensions, we say that they are of the same order.
+
+- To add or subtract two matrices, we add or subtract the corresponding elements of the matrices, being careful to maintain the same position of each element. 
+
+# Example: matrix addition
+
+- For instance, we have matrices $A$ and $B$. We can compute $C = A + B$, by defining each element of $C$ as $c_{ij} = a_{ij} + b_{ij}$. See below:
+
+$$
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+7 & 8 & 9
+\end{bmatrix}
+\quad
+B =
+\begin{bmatrix}
+9 & 8 & 7 \\
+6 & 5 & 4 \\
+3 & 2 & 1
+\end{bmatrix}
+$$
+
+$$
+C =
+\begin{bmatrix}
+1 + 9 & 2 + 8 & 3 + 7 \\
+4 + 6 & 5 + 5 & 6 + 4 \\
+7 + 3 & 8 + 2 & 9 + 1
+\end{bmatrix}
+= 
+\begin{bmatrix}
+10 & 10 & 10 \\
+10 & 10 & 10 \\
+10 & 10 & 10
+\end{bmatrix}
+$$
+
+# Matrix addition and subtraction
+
+- Substraction works in the same way, but with the operation $c_{ij} = a_{ij} - b_{ij}$ if we were to compute $C = A - B$.
+
+- Notice that if the matrices do not have the same dimensions, we cannot add or subtract them.
+
+- Key difference between matrix addition and scalar addition: matrices must have the same dimensions, and thus matrix addition and subtraction may not always be possible for all pairs of matrices.
+
+- Notice that because vectors are just special cases of matrices, the same rules apply to them!
+
+# Properties of matrix addition
+
+- Matrix addition has several properties that are similar to addition of two scalars (numbers).
+
+- **Commutative property**: $A + B = B + A$
+
+- **Associative property**: $(A + B) + C = A + (B + C)$
+
+- **Identity property**: $A + O = A$
+
+- **Inverse property**: $A + (-A) = O$
+
+- **Distributive property**: $k(A + B) = kA + kB$, where $k$ is a scalar.
+
+- **Distribution of scalar over matrix addition**: $(k + l)A = kA + lA$, where $k$ and $l$ are scalars.
+
+# Why do we care about these properties?
+
+- Why even care about these? It turns out that in many social science applications, we will need to work with matrices that we don't really observe, but we can infer from the data we have. i.e. they are *variable* matrices.
+
+- For instance, the matrix $X$ usually represents the matrix of all observed explanatory variables in a regression model. The vector $y$ represents the explained variable. 
+
+- You will need to learn the properties above (and some others) by heart to follow along with the math in some statistical models, since there is no easy way to work with them without knowing these properties, as there are just too many elements to work with.
+
+# The big one: matrix multiplication
+
+- Matrix multiplication is a bit more complex than the previous operations.
+
+- First of all, it requires the condition of **conformability**. No two matrices can be multiplied unless they are conformable with each other.
+
+- Conformable means that the number of columns in the first matrix must be equal to the number of rows in the second matrix. See below:
+
+\begin{equation*}
+A_{m \times n} \times B_{n \times p} = C_{m \times p}
+\end{equation*}
+
+- $A$ is conformable with $B$, since it has $n$ columns and $B$ has $n$ rows. 
+
+- The resulting matrix $C$ will have $m$ rows and $p$ columns (the "outer" dimensions of the matrices being multiplied).
+
+# The big one: matrix multiplication
+
+- How do we actually compute the elements of the resulting matrix $C$?
+
+- This is easiest seen with an example. Consider the following matrices:
+
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+\quad
+B =
+\begin{bmatrix}
+7 & 8 \\
+9 & 10 \\
+11 & 12
+\end{bmatrix}
+\end{equation*}
+
+- The resulting elements of C are computed as follows:
+
+\begin{equation*}
+C =
+\begin{bmatrix}
+1 \cdot 7 + 2 \cdot 9 + 3 \cdot 11 & 1 \cdot 8 + 2 \cdot 10 + 3 \cdot 12 \\
+4 \cdot 7 + 5 \cdot 9 + 6 \cdot 11 & 4 \cdot 8 + 5 \cdot 10 + 6 \cdot 12
+\end{bmatrix}
+\end{equation*}
+
+# The big one: matrix multiplication
+
+- This is defined as the **dot product** of the rows of the first matrix and the columns of the second matrix. Think of this as the `SUMPRODUCT` function in Excel, or multiplying the rows of the first matrix by the columns of the second matrix, and summing the results.
+
+- More generally, for any two matrices $A$ and $B$ with dimensions $m \times n$ and $n \times p$, respectively, the element $c_{ij}$ of the resulting matrix $C$ is given by:
+
+\begin{equation*}
+c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj}
+\end{equation*}
+
+where $i$ is the row number and $j$ is the column number, and $k$ is the index of the sum, which runs from 1 to $n$ (the number of columns in the first matrix).
+
+# The big one: matrix multiplication
+
+- Note that matrix multiplication is **not commutative**. That is, $A \times B \neq B \times A$.
+
+- This is because the number of columns in the first matrix must be equal to the number of rows in the second matrix. So, for our example above, $A \times B$ is defined, but $B \times A$ is not, since the number of columns in $B$ is not equal to the number of rows in $A$.
+
+- This is a common mistake that students make when first learning about matrix multiplication.
+
+# Premultiplication and postmultiplication
+
+- Because of the non-commutative nature of matrix multiplication, we have to always write down the order of the matrices when multiplying them, either in the equation or by specifying whether we are pre- or postmultiplying.
+
+- If we say premultiply $A$ by $B$, we write $BA$. This means that $B$ is on the left side of $A$. 
+
+- If we say postmultiply $A$ by $B$, we write $AB$. This means that $B$ is on the right side of $A$.
+
+- Note that the only case where both premultiplication and postmultiplication are defined is when $A$ and $B$ are square matrices, since the number of rows and columns are equal.
+
+# Properties of matrix multiplication
+
+- Matrix multiplication has several properties that are similar to multiplication of two scalars (numbers), but we need to adjust them to the matrix context.
+
+- **Associative property**: $(AB)C = A(BC)$
+
+- **Distributive property**, left: $A(B + C) = AB + AC$
+
+- **Distributive property**, right: $(A + B)C = AC + BC$
+
+- **Distributive property**, scalar: $k(AB) = (kA)B = A(kB)$
+
+- **Identity property**: $AI = IA = A$ (where $I$ is the identity matrix).
+
+- **Zero property**: $O_nA = AO_n = O_n$
+
+- **Transpose property**: $(AB)^T = B^T A^T$
+
+- **In general, matrix multiplication is not commutative**: $AB \neq BA$
+
+# Powers of matrices
+
+- We can also raise a matrix to a power, just like we can with a scalar.
+
+- To raise a matrix to a power, we multiply the matrix by itself the number of times indicated by the power.
+
+- For instance, consider the matrix $A$:
+
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 & 2 \\
+3 & 4
+\end{bmatrix}
+\end{equation*}
+
+- If we raise this matrix to the power of 2, we get:
+
+\begin{equation*}
+A^2 = A \times A =
+\begin{bmatrix}
+1 & 2 \\
+3 & 4
+
+\end{bmatrix}
+\begin{bmatrix}
+1 & 2 \\
+3 & 4
+
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 \cdot 1 + 2 \cdot 3 & 1 \cdot 2 + 2 \cdot 4 \\
+3 \cdot 1 + 4 \cdot 3 & 3 \cdot 2 + 4 \cdot 4
+\end{bmatrix}
+\end{equation*}
+
+- Do NOT confuse this with the element-wise power of a matrix, which is not a standard operation in matrix algebra.
+
+# Transposition
+
+- The **transpose** of a matrix is a new matrix that is obtained by exchanging the rows and columns of the original matrix.
+
+- The transpose of a matrix $A$ is denoted by $A'$ or $A^T$.
+
+- For instance, consider the matrix $A$:
+
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 & 2 & 3 \\
+4 & 5 & 6
+\end{bmatrix}
+\end{equation*}
+
+- The transpose of this matrix is:
+
+\begin{equation*}
+A'=
+\begin{bmatrix}
+1 & 4 \\
+2 & 5 \\
+3 & 6
+\end{bmatrix}
+\end{equation*}
+
+# Transposition properties
+
+- The transpose of a matrix has several properties that are useful in matrix algebra.
+
+- **Transposition of a sum**: $(A + B)' = A' + B'$
+- **Transposition of a product**: $(AB)' = B'A'$
+- **Transposition of a transposition**:
+    - $(A')' = A$
+- **Transposition of a scalar multiple**: $(kA)' = kA'$
+- **Transposition of an identity matrix**: $(I_n)' = I_n$ 
+- **Transposition of a zero matrix**: $(O_{m \times n})' = O_{n \times m}$
+- **Transposition of a diagonal matrix**: $(D)' = D$
+
+# Inverse of a matrix
+
+- The **inverse** of a matrix is a matrix that, when multiplied by the original matrix, results in the identity matrix.
+
+- The inverse of a matrix $A$ is denoted by $A^{-1}$.
+
+- It must hold that $AA^{-1} = A^{-1}A = I$, where $I$ is the identity matrix.
+
+- Not all matrices have an inverse. A matrix that has an inverse is called **invertible** or **nonsingular**. 
+
+- A matrix that does not have an inverse is called **noninvertible** or **singular**.
+
+# Inverse of a matrix
+
+- In order for a matrix to have an inverse, it must be a square matrix and its determinant must be different from zero.
+
+- The determinant of a matrix is a scalar value that can be computed from the elements of the matrix. It is denoted by $\text{det}(A)$.
+
+- The values of the inverse itself are a bit more complex to compute, and we will not cover them in this lecture; a computer can easily compute the inverse of a matrix.
+
+# Linear systems of equations in matrix form
+
+- One of the most common applications of matrix algebra is in solving systems of linear equations.
+
+- Consider a three variable system of equations:
+
+\begin{align*}
+2x + 3y + 4z &= 10 \\
+3x + 4y + 5z &= 20 \\
+4x + 5y + 6z &= 30
+\end{align*}
+
+- We write systems of linear equations in the following general form:
+
+$$ Ax = B $$
