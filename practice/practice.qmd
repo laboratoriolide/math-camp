@@ -1,0 +1,120 @@
+---
+title: Final Exam
+subtitle: Math for the Social Sciences
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: "Young Researchers Fellowship"
+date: 2024-08-29
+format: pdf
+include-in-header:
+    - text: |
+        \usepackage{tikz}
+        \usepackage{pgfplots}
+---
+
+This practice set contains a series of questions that resemble our final exam questions. The final exam may be different in terms of length, but should be similar in terms of average difficulty. These questions also follow a slightly different format than the final exam, which is a multiple-choice exam. The length of each question is similar. 
+
+# Questions
+
+1. When in 2016 Ecuador was hit by a 7.8 magnitude earthquake, the central government temporarily increased the Value Added Tax (VAT) from 12% to 14% to fund the reconstruction efforts. Currently, the VAT rate was increased from 12% to 15%. You read that the current increase is a mere 3% increase from the previous rate, while the previous 2016 increase was an approximately 17% increase from the previous rate. Is this argument correct? 
+
+2. There was a 33% growth in population in a certain town in the last 10 years. If the population in 2012 was 10,000, what was the population in 2002?
+
+3. State the domain of the function $f(x) = \dfrac{1}{x-2}$.
+
+4. Solve the following equation for $x$, where $a$, $b$ and $c$ are parameters: $a(x-b)^2 = c$.
+
+5. Develop the following sum, using properties where possible:
+
+$$ \sum_{i=1}^{n} (2i+1) $$
+
+6. The following plot shows the number of COVID-19 cases in a certain country across time. What was the relationship between the number of cases and time between days 10 and 20?
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    title={COVID-19 Cases in a Certain Country},
+    xlabel={Day},
+    ylabel={Number of Cases},
+    xmin=0, xmax=30,
+    ymin=0, ymax=1000,
+    xtick={0,5,10,15,20,25,30},
+    ytick={0,200,400,600,800,1000},
+    legend pos=north west,
+    ymajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[
+    color=blue,
+    mark=square,
+    ]
+    coordinates {
+    (0,0)(5,100)(10,300)(15,600)(20,800)(25,900)(30,950)
+    };
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+7. Find the equation of the line that passes through the points defined by days 10 and 20. State all assumptions made. 
+
+8. Solve for $t$ below:
+
+$$ 2^{t+1} = 2^{t-1} + 16 $$
+
+9. How would a structural estimation of a theoretical model differ from a reduced-form estimation?
+
+10. The elasticity of demand for education is -0.5. Interpret this value in terms of the relationship between the price of education and the quantity demanded.
+
+11. Tax policy would potentially increase the average price of education by 10%. How would this affect the quantity demanded, given the elasticity of demand for education from the previous question? 
+
+12. The following plot shows a function of public welfare estimated by a government. 
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    title={Public Welfare Function},
+    xlabel={Year},
+    ylabel={Public Welfare},
+    xmin=0, xmax=10,
+    ymin=0, ymax=10,
+    xtick={0,2,4,6,8,10},
+    ytick={0,2,4,6,8,10},
+    ymajorgrids=true,
+    xmajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[
+    color=red,
+    mark=triangle,
+    ]
+    coordinates {
+    (0,0)(2,1)(4,3)(6,6)(8,8)(10,9)
+    };
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+Draw a line tangent to the curve at year 5. What does the slope of this line represent? 
+
+13. Is there any indication that the function above can be maximized or minimized? If so, what would be the optimal value of the function?
+
+14. The function below shows the multivariate relationship between the number of hours studied $x$, the number of hours slept $y$, and the grade obtained in a test $z$.
+
+$$ z = f(x,y) = 2x + 3y $$
+
+What is the partial elasticity of hours studied on the grade obtained in the test?
+
+15. Write down the gradient of the function $f(x,y)$ above.
+
+16. For matrices $A$ and $B$ below, calculate the product $AB$. If not possible, state why.
+
+$$ A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} \quad B = \begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix} $$
+
+17. Develop the matrix $C$, where its elements are the sum of the elements of matrices $A$ and $B$.
+
+$A = \begin{bmatrix} a_1 & a_2 \\ a_3 & a_4 \\ a_5 & a_6 \end{bmatrix}$ and $B = \begin{bmatrix} b_1 & b_2 \\ b_3 & b_4 \\ b_5 & b_6 \end{bmatrix}$
+
+18. Find the inner product of the vectors $v = \begin{bmatrix} 1 \\ 2 \\ 3 \end{bmatrix}$ and $w = \begin{bmatrix} 4 \\ 5 \\ 6 \end{bmatrix}$.
