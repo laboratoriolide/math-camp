@@ -1,0 +1,329 @@
+---
+title: Final Exam Answers
+subtitle: Math for the Social Sciences
+institute: Laboratorio de Investigación para el Desarrollo del Ecuador
+author: "Young Researchers Fellowship"
+date: 2024-08-29
+format: pdf
+include-in-header:
+    - text: |
+        \usepackage{tikz}
+        \usepackage{pgfplots}
+---
+
+# Instructions
+
+This exam lasts one hour and a half (90 minutes). Please answer in the Google form provided. It is mandatory to keep your camera on during the entire exam. You are not allowed to use any external resources.
+
+# Questions
+
+1\. A new statistical software has been developed. The following operation was performed in the console:
+
+$$2+5+6\div 3\times 2$$ 
+
+The answer to the operation provided by the software was **8.67**. What order of operations seems to be used by the software?
+
+a. PEMDAS: Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right).
+
+**b. Addition, Subtraction, Multiplication, Division.**
+
+c. Division, Multiplication, Addition, Subtraction.
+
+d. None of the above. 
+
+2\. A study involved implementing different treatments to different towns around a certain province in country. The treatment involved the use of political awareness campaigns to see if the number of people voting in the next election increased. 50% of people registered to vote was randomly selected to receive the treatment. Within the treatment group, 60% of people lived in urban areas. How much of those registered to vote received the treatment and lived in urban areas?
+
+**a. 30%**
+
+b. 20%
+
+c. 12%
+
+d. None of the above
+
+3\. When one increases a value by a certain percentage, and then decreases the result by the same percentage, the final value is always less than the original value.
+
+**a. True**
+
+b. False
+
+c. Cannot be determined
+
+d. None of the above
+
+
+4\. The domain of the function $f(x) = \sqrt{4-x^2}$ is:
+
+a. $x \in \mathbb{R}$ (all real numbers)
+
+b. $x \in \mathbb{R} \mid x \leq 2$ (all real numbers less than or equal to 2)
+
+**c. $x \in \mathbb{R} \mid -2 \leq x \leq 2$** (all real numbers between -2 and 2)
+
+d. None of the above
+
+
+5\. For the equation $AK \sqrt{L} = Y$, where $A$, $K$, $Y$ are parameters and $L$ is a variable, the solution for $L$ is:
+
+a. $L = \frac{Y}{AK}$
+
+b. $L = \frac{Y^2}{AK}$
+
+**c. $L = \frac{Y^2}{AK^2}$**
+
+d. None of the above
+
+6\. The solution to $x^2- 80 =  1$ is
+
+a. $x = 9$
+
+b. $x = 10$
+
+c. $x = 11$
+
+d. **None of the above**
+
+7\. The population variance formula is given by:
+
+$$ \sigma^2 = \dfrac{1}{n}\sum_{i=1}^{n} (x_i - \bar{x})^2$$
+
+Where $\bar{x}$ is the sample mean. For calculating the sample variance, a "Bessel's correction" is applied, where the denominator is $n-1$ instead of $n$. This is equal to:
+
+a. $\sum_{i=1}^{n} \dfrac{1}{n-1} (x_i - \bar{x})^2$
+
+b. $\dfrac{1}{n-1}\sum_{i=1}^{n} (x_i - \bar{x})^2$
+
+c. **Both a and b**
+
+d. None of the above
+
+8\. The expression $(2^3 \times 2^4 \div 8) \times (16^{1/2} \div 2)$ is equal to
+
+a. 16
+b. **32**
+c. $2^3$
+d. $2^2$
+
+9\. The following is a scatter plot of the relationship between the number of hours studied and the grade obtained in a test. What can be said about the relationship between the two variables?
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[scale=0.7]
+\begin{axis}[
+    xlabel={Hours studied},
+    ylabel={Grade},
+    xmin=0, xmax=10,
+    ymin=0, ymax=10,
+    xtick={0,2,4,6,8,10},
+    ytick={0,2,4,6,8,10},
+    ymajorgrids=true,
+    xmajorgrids=true,
+    grid style=dashed,
+]
+
+\addplot[
+    only marks,
+    color=blue,
+    mark=*,
+    ]
+    coordinates {
+    (1,2)(2,3)(3,4)(4,5)(5,6)(6,7)(7,8)(8,9)(9,10)
+    };
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+a. **The variables are positively related to each other and they are in the first quadrant**.
+
+b. The variables are negatively related to each other and they are in the first quadrant.
+
+c. The variables are positively related to each other and they are in the second quadrant.
+
+d. None of the above.
+
+10\.  From the above graph, what is the estimated line which passes through the points?
+
+a. $y = 2x$
+
+b. $y = x$
+
+c. $y = x + 1$
+
+**d. $y = x + 1$**
+
+11\. The vertex of the parabola $y = x^2 - 4x + 3$ is:
+
+a. $(2,1)$
+
+b. $(2,-1)$
+
+c. $(2,3)$
+
+**d. $(2,-1)$**
+
+12\. The graph above shows some data about education level and income. Given the observed relationship, what scale on the y-axis would imply that income is growing at a 10% constant rate for every unit increase in education level?
+
+\begin{figure}[h]
+    \centering
+\begin{tikzpicture}[scale=0.7]
+\begin{axis}[
+    xlabel={Education level},
+    ylabel={Income},
+    xmin=0, xmax=10,
+    ymin=0, ymax=10,
+    xtick={0,2,4,6,8,10},
+    ytick={0,2,4,6,8,10},
+    ymajorgrids=true,
+    xmajorgrids=true,
+    grid style=dashed,
+]
+\addplot[
+    only marks,
+    color=blue,
+    mark=*,
+    ]
+    coordinates {
+    (1,2)(2,3)(3,4)(4,5)(5,6)(6,7)(7,8)(8,9)(9,10)
+    };
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+a. Regular scale
+b. **Natural log scale**
+c. Applying a 10% increase to the y-axis
+d. None of the above
+
+13\. The solution to the equation above for $t$ is:
+
+$$\frac{1}{\sqrt{2\pi}}e^{-1/2t^2} = \dfrac{1}{8}$$
+
+a. $t = \sqrt{\ln{\frac{32}{\pi}}}$
+
+b. $t = \sqrt{\ln{\frac{16}{\pi}}}$
+
+c. $t = - \sqrt{\ln{\frac{32}{\pi}}}$
+
+**d. None of the above**
+
+14\. A political scientist has theorized that the popularity function of a candidate will be given determined in a complex model, where popularity is a function of the number of votes obtained in the previous election, the number of years in office, and the number of scandals in which the candidate has been involved. A reduced form estimation would potentially involve:
+
+a. **Estimating the popularity function directly, using a simplified model**.
+b. Carefully determining the relationships between the variables in separate models, taking the theoretical model seriously. 
+c. No estimation at all, as the model is too complex to be estimated.
+d. None of the above.
+
+15\. Consider the graph below.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    axis lines = middle,
+    xlabel = $x$,
+    ylabel = $y$,
+    domain=-2:2,
+    samples=100,
+    width=10cm,
+    height=8cm,
+    grid = major,
+    legend pos=outer north east
+]
+
+% Plot the cubic function y = x^3 - x
+\addplot[
+    color=blue,
+    thick
+] {x^3 - x} node[right] {$y = x^3 - x$};
+
+% Calculate the derivative of the cubic function y' = 3x^2 - 1
+\addplot[
+    color=red,
+    thick,
+    domain=-2:2
+] {3*1^2 - 1} node[right] {$y' = 3x^2 - 1$};
+
+% Tangent line at x = 1
+\addplot[
+    color=green,
+    thick,
+    domain=-2:2
+] {3*1^2 - 1} node[right] {Tangent line at $x = 1$};
+
+% Mark the point of tangency
+\addplot[
+    only marks,
+    mark=*,
+    color=black
+] coordinates {(1, 0)};
+
+\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+The line at $y = 2$ is tangent to the curve $y = x^3 - x$.
+
+a. True
+b. **False**
+c. Cannot be determined
+d. None of the above
+
+16\. The slope of the tangent line to the curve $y = x^3 - x$ at $x = 1$ is:
+
+a. 2
+b. 3
+c. 4
+d. **2**
+
+17\. The elasticity of jail time with respect to police presence (in number of officers) was estimated as -0.05. The interpretation of this coefficient is:
+
+a. For every additional police officer, jail time decreases by 0.05 units.
+b. For every additional police officer, jail time increases by 0.05 units.
+c. For every additional police officer, jail time increases by 5%.
+d. **For every additional police officer, jail time decreases by 5%**.
+
+18\. It was observed that police presence would increase in a certain town from 100 to 200 officers. The expected change in jail time would be:
+
+a. -5%
+b. 5%
+c. **-10%**
+d. None of the above
+
+19\. The satisfaction from a criminal from committing a crime was estimated by the function $U = 10 + 2C^2$, where $C$ is the number of years in jail. At what level of jail time is satisfaction minimized?
+
+a. $C = 0$
+b. $C = 1$
+c. **$C = 2$**
+d. None of the above
+
+20\. The gradient of function $f(x,y) = x^2 + ln(y^2)$ at the point $(1,1)$ is:
+
+a. $(2,2)$
+
+b. $(2,0)$
+
+c. **$(2,0.5)$**
+
+d. None of the above
+
+21\. A matrix $A_{2x2}$ and a vector $b_{2x1}$ were multiplied. A student claims that the result is a vector.
+
+a. **True**
+
+b. False
+
+c. Cannot be determined
+
+d. None of the above
+
+22\. The inverse of matrix $A_{2x2}$ below is:
+
+$$A = \begin{bmatrix} 1 & 2 \\ 3 & 4 \\ 3 & 4 \end{bmatrix}$$
+
+a. $\begin{bmatrix} 1 & 3 & 3 \\ 2 & 4 & 4 \end{bmatrix}$
+
+b. $\begin{bmatrix} 1 & 2 \\ 3 & 4 \end{bmatrix}$
+
+c. $\begin{bmatrix} 1 & 2 \\ 6 & 4 \end{bmatrix}$
+
+d. **None of the above**
