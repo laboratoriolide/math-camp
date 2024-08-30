@@ -284,25 +284,25 @@ d. **For every additional police officer, jail time decreases by 5%**.
 
 18\. It was observed that police presence would increase in a certain town from 100 to 200 officers. The expected change in jail time would be:
 
-a. -5%
+a. **-5%**
 b. 5%
-c. **-10%**
+c. -10%
 d. None of the above
 
 19\. The satisfaction from a criminal from committing a crime was estimated by the function $U = 10 + 2C^2$, where $C$ is the number of years in jail. At what level of jail time is satisfaction minimized?
 
 a. $C = 0$
 b. $C = 1$
-c. **$C = 2$**
+**c. $C = 2$**
 d. None of the above
 
 20\. The gradient of function $f(x,y) = x^2 + ln(y^2)$ at the point $(1,1)$ is:
 
-a. $(2,2)$
+**a. $(2,2)$**
 
 b. $(2,0)$
 
-c. **$(2,0.5)$**
+c. $(2,0.5)$
 
 d. None of the above
 
